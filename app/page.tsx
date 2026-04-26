@@ -20,6 +20,13 @@ export default function Home() {
       <p className="text-sm text-vex-text-muted">
         Accessible. Composable. Tree-shakeable. Zero runtime CSS-in-JS.
       </p>
+
+      <pre className="font-mono text-sm bg-vex-card border border-vex-border rounded-md px-4 py-2">
+        <code>
+          <span className="text-vex-text-muted">$</span>{" "}
+          <span className="text-vex-accent">npm install vexkit</span>
+        </code>
+      </pre>
     </main>
   );
 }
