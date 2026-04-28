@@ -17,7 +17,7 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="Toggle theme"
-      className="vk-ring fixed top-4 right-4 z-50 inline-flex h-9 w-9 items-center justify-center rounded-md border border-vex-border bg-vex-card/60 text-vex-text transition-colors hover:text-vex-heading light:bg-vex-card"
+      className="vk-ring inline-flex h-9 w-9 items-center justify-center rounded-md border border-vex-border bg-vex-card/60 text-vex-text transition-colors hover:text-vex-heading light:bg-vex-card"
     >
       <Sun size={18} aria-hidden className="light:hidden" />
       <Moon size={18} aria-hidden className="hidden light:inline" />

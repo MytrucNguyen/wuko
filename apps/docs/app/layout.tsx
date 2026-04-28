@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+
+import { Header } from "@/components/shell/header";
+import { MobileNavProvider } from "@/components/shell/mobile-nav-provider";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -32,7 +36,12 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="font-sans antialiased min-h-screen">{children}</body>
+      <body className="font-sans antialiased min-h-screen">
+        <MobileNavProvider>
+          <Header />
+          {children}
+        </MobileNavProvider>
+      </body>
     </html>
   );
 }
