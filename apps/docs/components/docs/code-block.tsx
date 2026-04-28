@@ -1,13 +1,16 @@
 import { Code2 } from "lucide-react";
 
+import { highlight } from "@/lib/shiki";
+
 export interface CodeBlockProps {
   code: string;
   lang?: string;
   filename?: string;
 }
 
-export function CodeBlock({ code, lang = "tsx", filename }: CodeBlockProps) {
+export async function CodeBlock({ code, lang = "tsx", filename }: CodeBlockProps) {
   const label = filename ?? lang;
+  const html = await highlight(code, lang);
 
   return (
     <div className="overflow-hidden rounded-lg border border-vex-border bg-vex-card/40">
@@ -18,9 +21,10 @@ export function CodeBlock({ code, lang = "tsx", filename }: CodeBlockProps) {
         </div>
         <div aria-hidden="true" className="h-5 w-5" />
       </div>
-      <pre className="overflow-x-auto p-4 font-mono text-[12.5px] leading-relaxed text-vex-text">
-        <code>{code}</code>
-      </pre>
+      <div
+        className="vex-shiki overflow-x-auto p-4 text-[12.5px] leading-relaxed"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 }

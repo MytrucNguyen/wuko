@@ -138,6 +138,25 @@ body {
   color: var(--vex-heading);
 }
 
+/* Shiki dual-theme: defaultColor:false emits --shiki-light/--shiki-dark on each span,
+   no inline color rule. We pick which variable applies based on [data-theme].
+   Token spans only carry foreground color; the surrounding card surface shows
+   through the transparent <pre>. (--shiki-*-bg cascades from <pre>, so applying
+   it on spans would tile per-token bg patches — see memory:
+   feedback_css_var_only_at_declaring_element.) */
+.vex-shiki .shiki,
+.vex-shiki .shiki span {
+  color: var(--shiki-dark);
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+[data-theme="light"] .vex-shiki .shiki,
+[data-theme="light"] .vex-shiki .shiki span {
+  color: var(--shiki-light);
+}
+.vex-shiki .shiki {
+  background: transparent;
+}
+
 /* Mobile sidebar backdrop */
 .vk-backdrop {
   background: rgba(15, 23, 42, 0.6);
