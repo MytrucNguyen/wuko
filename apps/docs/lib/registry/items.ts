@@ -156,6 +156,40 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "vex-alert",
+    type: "registry:ui",
+    title: "Alert",
+    description:
+      "An inline message block with info, success, warning, and danger variants. Each variant ships an icon, role-token color, and an ARIA role appropriate to the urgency (status for info/success, alert for warning/danger). Optional title and close button.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["lucide-react"],
+    files: [
+      {
+        diskPath: "registry/default/ui/vex-alert.tsx",
+        registryPath: "ui/vex-alert.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
+  {
+    name: "vex-tabs",
+    type: "registry:ui",
+    title: "Tabs",
+    description:
+      "A roving-focus tab list with full keyboard navigation (arrow keys, Home, End) and an animated active indicator. Built on Radix Tabs. Compound API: Tabs (Root), TabsList, TabsTrigger, TabsContent. Triggers support asChild for URL-driven tabs.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-tabs"],
+    files: [
+      {
+        diskPath: "registry/default/ui/vex-tabs.tsx",
+        registryPath: "ui/vex-tabs.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
