@@ -11,7 +11,10 @@
     "validate:registry": "tsx scripts/validate-registry.ts"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tooltip": "^1.2.8",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^1.11.0",
     "next": "16.2.4",

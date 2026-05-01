@@ -105,6 +105,57 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "vex-toggle",
+    type: "registry:ui",
+    title: "Toggle",
+    description:
+      "A two-state switch built on Radix Switch. Controlled via checked/onChange; supports sm and md sizes, optional inline label, and disabled state. For form-submitted boolean inputs, prefer Checkbox.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-switch"],
+    files: [
+      {
+        diskPath: "registry/default/ui/vex-toggle.tsx",
+        registryPath: "ui/vex-toggle.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
+  {
+    name: "vex-tooltip",
+    type: "registry:ui",
+    title: "Tooltip",
+    description:
+      "A short, hover- or focus-revealed label built on Radix Tooltip. Uncontrolled — Radix manages open/close internally; consumers pass content (the body) and children (the trigger). Each Tooltip is self-contained with its own Provider, so no app-root wrap is needed.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-tooltip"],
+    files: [
+      {
+        diskPath: "registry/default/ui/vex-tooltip.tsx",
+        registryPath: "ui/vex-tooltip.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
+  {
+    name: "vex-avatar",
+    type: "registry:ui",
+    title: "Avatar",
+    description:
+      "A user's photo, initials, or fallback character built on Radix Avatar — automatic image loading state with fallback during load and on error. Supports sm/md/lg sizes plus an optional status dot for online/away/offline presence.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-avatar"],
+    files: [
+      {
+        diskPath: "registry/default/ui/vex-avatar.tsx",
+        registryPath: "ui/vex-avatar.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
