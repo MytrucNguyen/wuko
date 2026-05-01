@@ -9,7 +9,7 @@ export default function DocsLayout({
   return (
     <div className="flex">
       <Sidebar />
-      <main className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1">
         <div className="mx-auto flex max-w-6xl gap-12 px-6 py-10 lg:px-12">
           <article className="min-w-0 max-w-3xl flex-1">{children}</article>
           <aside className="hidden w-52 shrink-0 xl:block">
@@ -18,7 +18,7 @@ export default function DocsLayout({
             </div>
           </aside>
         </div>
-      </main>
+      </div>
     </div>
   );
 }

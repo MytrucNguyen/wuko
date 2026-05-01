@@ -38,7 +38,7 @@ export function Header() {
             alt=""
             width={26}
             height={26}
-            className="rounded-lg object-contain"
+            className="rounded-lg object-contain -translate-y-0.5"
             aria-hidden
           />
           <span className="text-[18px] font-extrabold tracking-tight text-vex-heading">

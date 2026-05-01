@@ -26,7 +26,7 @@ const FEATURES = [
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Hero />
       <section className="mx-auto -mt-8 max-w-6xl px-8 pb-24">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -35,6 +35,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

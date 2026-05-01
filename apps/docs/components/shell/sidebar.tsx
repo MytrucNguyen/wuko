@@ -15,17 +15,18 @@ const NAV = [
   },
   {
     title: "Components",
+    path: "/docs/components",
     items: [
-      { label: "Button", path: "/docs/components/button" },
-      { label: "Input", path: "/docs/components/input" },
-      { label: "Card", path: "/docs/components/card" },
-      { label: "Modal", path: "/docs/components/modal" },
+      { label: "Alert", path: "/docs/components/alert" },
+      { label: "Avatar", path: "/docs/components/avatar" },
       { label: "Badge", path: "/docs/components/badge" },
+      { label: "Button", path: "/docs/components/button" },
+      { label: "Card", path: "/docs/components/card" },
+      { label: "Input", path: "/docs/components/input" },
+      { label: "Modal", path: "/docs/components/modal" },
+      { label: "Tabs", path: "/docs/components/tabs" },
       { label: "Toggle", path: "/docs/components/toggle" },
       { label: "Tooltip", path: "/docs/components/tooltip" },
-      { label: "Avatar", path: "/docs/components/avatar" },
-      { label: "Alert", path: "/docs/components/alert" },
-      { label: "Tabs", path: "/docs/components/tabs" },
     ],
   },
 ];
@@ -57,9 +58,20 @@ export function Sidebar() {
         <nav className="space-y-7 px-4 py-6">
           {NAV.map((section) => (
             <div key={section.title}>
-              <div className="mb-2 px-3 text-[11px] font-semibold uppercase tracking-wider text-vex-text-muted">
-                {section.title}
-              </div>
+              {section.path ? (
+                <Link
+                  href={section.path}
+                  data-active={pathname === section.path}
+                  onClick={closeDrawer}
+                  className="nav-link mb-2 block rounded-md px-3 text-[11px] font-semibold uppercase tracking-wider text-vex-text-muted transition-colors hover:text-vex-heading"
+                >
+                  {section.title}
+                </Link>
+              ) : (
+                <div className="mb-2 px-3 text-[11px] font-semibold uppercase tracking-wider text-vex-text-muted">
+                  {section.title}
+                </div>
+              )}
               <ul>
                 {section.items.map((it) => (
                   <li key={it.path}>
