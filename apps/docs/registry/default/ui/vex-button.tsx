@@ -21,6 +21,10 @@ const buttonVariants = cva(
         sm: "h-8 px-3 text-[13px] gap-1.5 rounded-md",
         md: "h-10 px-4 text-sm gap-2 rounded-md",
         lg: "h-12 px-5 text-[15px] gap-2 rounded-lg",
+        "icon-xs": "size-7 rounded-md",
+        "icon-sm": "size-8 rounded-md",
+        icon: "size-10 rounded-md",
+        "icon-lg": "size-12 rounded-lg",
       },
     },
     defaultVariants: {
@@ -47,8 +51,6 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   loading?: boolean;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -58,8 +60,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size = "md",
       loading = false,
       disabled = false,
-      leftIcon,
-      rightIcon,
       className,
       children,
       type = "button",
@@ -101,11 +101,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               strokeLinecap="round"
             />
           </svg>
-        ) : (
-          leftIcon
-        )}
+        ) : null}
         {children}
-        {!loading && rightIcon}
       </button>
     );
   }

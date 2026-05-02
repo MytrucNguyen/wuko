@@ -10,15 +10,20 @@ export function TooltipExample() {
     <div className="space-y-8">
       <div className="flex flex-wrap items-center gap-4">
         <Tooltip content="Trigger a deploy">
-          <Button leftIcon={<Zap className="size-4" />}>Deploy</Button>
+          <Button>
+            <Zap className="size-4" />
+            Deploy
+          </Button>
         </Tooltip>
         <Tooltip content="3 unread notifications">
-          <Button variant="outline" leftIcon={<Bell className="size-4" />}>
+          <Button variant="outline">
+            <Bell className="size-4" />
             Inbox
           </Button>
         </Tooltip>
         <Tooltip content="Permanently delete">
-          <Button variant="danger" leftIcon={<Trash2 className="size-4" />}>
+          <Button variant="danger">
+            <Trash2 className="size-4" />
             Delete
           </Button>
         </Tooltip>

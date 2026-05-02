@@ -30,13 +30,31 @@ const STATES_SAMPLE = `<Button>Default</Button>
 <Button disabled>Disabled</Button>
 <Button loading>Saving…</Button>`;
 
+const ICON_BUTTON_SAMPLE = `<Button size="icon-xs" aria-label="Deploy">
+  <Zap className="size-3.5" />
+</Button>
+<Button size="icon-sm" aria-label="Deploy">
+  <Zap className="size-4" />
+</Button>
+<Button size="icon" aria-label="Deploy">
+  <Zap className="size-4" />
+</Button>
+<Button size="icon-lg" aria-label="Deploy">
+  <Zap className="size-5" />
+</Button>`;
+
 const ICONS_SAMPLE = `import { ArrowRight, Trash2, Zap } from "lucide-react";
 
-<Button leftIcon={<Zap className="size-4" />}>Deploy</Button>
-<Button variant="outline" rightIcon={<ArrowRight className="size-4" />}>
-  Continue
+<Button>
+  <Zap className="size-4" />
+  Deploy
 </Button>
-<Button variant="danger" leftIcon={<Trash2 className="size-4" />}>
+<Button variant="outline">
+  Continue
+  <ArrowRight className="size-4" />
+</Button>
+<Button variant="danger">
+  <Trash2 className="size-4" />
   Delete project
 </Button>`;
 
@@ -49,34 +67,23 @@ const PROPS_ROWS = [
   },
   {
     name: "size",
-    type: '"sm" | "md" | "lg"',
+    type: '"sm" | "md" | "lg" | "icon-xs" | "icon-sm" | "icon" | "icon-lg"',
     default: '"md"',
-    description: "Controls height, horizontal padding, and font size.",
+    description:
+      "Controls dimensions, padding, and font size. The icon-* sizes are square — use them for icon-only buttons with an aria-label.",
   },
   {
     name: "loading",
     type: "boolean",
     default: "false",
     description:
-      "Shows a spinner in place of leftIcon, sets aria-busy, and disables interaction.",
+      "Shows a spinner before the children, sets aria-busy, and disables interaction.",
   },
   {
     name: "disabled",
     type: "boolean",
     default: "false",
     description: "Prevents user interaction via the native disabled attribute.",
-  },
-  {
-    name: "leftIcon",
-    type: "ReactNode",
-    default: "—",
-    description: "Element rendered before the children. Hidden while loading.",
-  },
-  {
-    name: "rightIcon",
-    type: "ReactNode",
-    default: "—",
-    description: "Element rendered after the children. Hidden while loading.",
   },
   {
     name: "...rest",
@@ -145,8 +152,8 @@ export default function ButtonPage() {
 
       <H2 id="states">States</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
-        <code>disabled</code> blocks interaction; <code>loading</code> swaps the
-        leading slot for a spinner, sets <code>aria-busy</code>, and disables
+        <code>disabled</code> blocks interaction; <code>loading</code> shows a
+        spinner before the children, sets <code>aria-busy</code>, and disables
         the button.
       </p>
       <ExampleSurface>
@@ -156,27 +163,50 @@ export default function ButtonPage() {
       </ExampleSurface>
       <CodeBlock lang="tsx" code={STATES_SAMPLE} />
 
-      <H2 id="icons">With icons</H2>
+      <H2 id="icons">Composing with icons</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
-        Pass any <code>ReactNode</code> to <code>leftIcon</code> or{" "}
-        <code>rightIcon</code>. The button takes care of spacing.
+        Place any icon (or other element) inside the button as a child. Button
+        uses flex with a size-aware <code>gap</code>, so spacing matches the
+        button&apos;s size automatically.
       </p>
       <ExampleSurface>
-        <Button leftIcon={<Zap className="size-4" />}>Deploy</Button>
-        <Button
-          variant="outline"
-          rightIcon={<ArrowRight className="size-4" />}
-        >
-          Continue
+        <Button>
+          <Zap className="size-4" />
+          Deploy
         </Button>
-        <Button
-          variant="danger"
-          leftIcon={<Trash2 className="size-4" />}
-        >
+        <Button variant="outline">
+          Continue
+          <ArrowRight className="size-4" />
+        </Button>
+        <Button variant="danger">
+          <Trash2 className="size-4" />
           Delete project
         </Button>
       </ExampleSurface>
       <CodeBlock lang="tsx" code={ICONS_SAMPLE} />
+
+      <H2 id="icon-button">Icon button</H2>
+      <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
+        Square sizes for icon-only triggers — <code>icon-xs</code>,{" "}
+        <code>icon-sm</code>, <code>icon</code>, and <code>icon-lg</code>. An{" "}
+        <code>aria-label</code> is required so the button has an accessible
+        name.
+      </p>
+      <ExampleSurface>
+        <Button size="icon-xs" aria-label="Deploy">
+          <Zap className="size-3.5" />
+        </Button>
+        <Button size="icon-sm" aria-label="Deploy">
+          <Zap className="size-4" />
+        </Button>
+        <Button size="icon" aria-label="Deploy">
+          <Zap className="size-4" />
+        </Button>
+        <Button size="icon-lg" aria-label="Deploy">
+          <Zap className="size-5" />
+        </Button>
+      </ExampleSurface>
+      <CodeBlock lang="tsx" code={ICON_BUTTON_SAMPLE} />
 
       <H2 id="props">Props</H2>
       <PropsTable rows={PROPS_ROWS} />
@@ -201,6 +231,12 @@ export default function ButtonPage() {
           Focus is announced visually with a 2px outline in{" "}
           <code>--vex-accent</code> at a 2px offset, visible against any
           background.
+        </li>
+        <li>
+          Icon-only buttons (any <code>size=&quot;icon-*&quot;</code>) require
+          an <code>aria-label</code> so screen readers can announce the
+          button&apos;s purpose. The icon SVG itself should remain{" "}
+          <code>aria-hidden</code>.
         </li>
       </ul>
 
