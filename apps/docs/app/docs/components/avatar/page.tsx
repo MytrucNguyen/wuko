@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
+import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
 
@@ -115,6 +116,9 @@ export default function AvatarPage() {
           for online/away/offline presence.
         </p>
       </header>
+
+      <H2 id="installation">Installation</H2>
+      <InstallationTabs name="vex-avatar" />
 
       <H2 id="sizes">Sizes</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">

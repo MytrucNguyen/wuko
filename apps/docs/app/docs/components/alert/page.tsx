@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
+import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
 import { Alert } from "@/registry/default/ui/vex-alert";
@@ -117,6 +118,9 @@ export default function AlertPage() {
           role appropriate to the urgency. Optional title and close button.
         </p>
       </header>
+
+      <H2 id="installation">Installation</H2>
+      <InstallationTabs name="vex-alert" />
 
       <H2 id="variants">Variants</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">

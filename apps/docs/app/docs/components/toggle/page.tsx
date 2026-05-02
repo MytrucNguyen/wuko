@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
+import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
 
@@ -123,6 +124,9 @@ export default function TogglePage() {
           form-submitted boolean inputs, prefer Checkbox.
         </p>
       </header>
+
+      <H2 id="installation">Installation</H2>
+      <InstallationTabs name="vex-toggle" />
 
       <H2 id="usage">Usage</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">

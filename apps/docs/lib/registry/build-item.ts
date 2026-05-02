@@ -69,3 +69,17 @@ export async function buildRegistryItem(
 
   return { ok: true, item };
 }
+
+export async function getRegistrySource(name: string): Promise<string> {
+  const source = getRegistryItem(name);
+  if (!source) {
+    throw new Error(`Registry item "${name}" not found.`);
+  }
+  if (source.files.length !== 1) {
+    throw new Error(
+      `Expected exactly 1 source file for "${name}", got ${source.files.length}.`,
+    );
+  }
+  const absolutePath = path.join(process.cwd(), source.files[0].diskPath);
+  return fs.readFile(absolutePath, "utf8");
+}

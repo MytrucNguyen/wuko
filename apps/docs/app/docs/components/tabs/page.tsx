@@ -1,5 +1,6 @@
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
+import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
 
@@ -189,6 +190,9 @@ export default function TabsPage() {
           Home, End) and an animated active indicator. Built on Radix Tabs.
         </p>
       </header>
+
+      <H2 id="installation">Installation</H2>
+      <InstallationTabs name="vex-tabs" />
 
       <H2 id="usage">Usage</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">

@@ -2,6 +2,7 @@ import { Mail, Search } from "lucide-react";
 
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
+import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
 import { Input } from "@/registry/default/ui/vex-input";
@@ -161,6 +162,9 @@ export default function InputPage() {
           and trailing icons, and any native input type.
         </p>
       </header>
+
+      <H2 id="installation">Installation</H2>
+      <InstallationTabs name="vex-input" />
 
       <H2 id="usage">Usage</H2>
       <ExampleSurface>

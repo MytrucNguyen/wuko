@@ -2,6 +2,7 @@ import { ArrowRight, Trash2, Zap } from "lucide-react";
 
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
+import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
 import { Button } from "@/registry/default/ui/vex-button";
@@ -117,6 +118,9 @@ export default function ButtonPage() {
           weight of the action.
         </p>
       </header>
+
+      <H2 id="installation">Installation</H2>
+      <InstallationTabs name="vex-button" />
 
       <H2 id="usage">Usage</H2>
       <ExampleSurface>
