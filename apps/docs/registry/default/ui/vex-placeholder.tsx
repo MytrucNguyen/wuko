@@ -1,6 +1,6 @@
 import * as React from "react";
 
-// Phase 3 plumbing test — replaced by real primitives from Phase 5 onward.
+// Phase 3 plumbing test, replaced by real primitives from Phase 5 onward.
 export interface VexPlaceholderProps
   extends React.HTMLAttributes<HTMLDivElement> {
   label?: string;

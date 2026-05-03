@@ -24,8 +24,8 @@ interface VariantConfig {
   role: "alert" | "status";
 }
 
-// Role mapping: warning + danger use role="alert" (assertive — interrupts the
-// screen reader). info + success use role="status" (polite — queued). This
+// Role mapping: warning + danger use role="alert" (assertive, interrupts the
+// screen reader). info + success use role="status" (polite, queued). This
 // matches WAI-ARIA's intent where "alert" is reserved for time-sensitive,
 // must-acknowledge messages.
 const variantConfig: Record<AlertVariant, VariantConfig> = {

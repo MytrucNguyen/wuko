@@ -11,7 +11,7 @@ import {
 } from "./tabs-example";
 
 export const metadata = {
-  title: "Tabs — VexKit",
+  title: "Tabs | VexKit",
 };
 
 const USAGE_SAMPLE = `import {
@@ -214,8 +214,8 @@ export default function TabsPage() {
 
       <H2 id="controlled">Controlled</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
-        For full control over the active tab — to sync with URL, server state,
-        or external buttons — pass <code>value</code> and{" "}
+        For full control over the active tab (to sync with URL, server state,
+        or external buttons), pass <code>value</code> and{" "}
         <code>onValueChange</code>. Below, the row of buttons under the tabs
         sets the active tab from outside the component.
       </p>
@@ -233,7 +233,7 @@ export default function TabsPage() {
         Pass <code>asChild</code> to <code>TabsTrigger</code> to substitute
         your own element as the trigger. Radix applies the trigger&apos;s
         props (role, data-state, focus management) to your child. The most
-        common use is URL-driven tabs — render a <code>Link</code> as the
+        common use is URL-driven tabs. Render a <code>Link</code> as the
         trigger so navigation and tab state stay in sync.
       </p>
       <ExampleSurface>
@@ -265,7 +265,7 @@ export default function TabsPage() {
         <li>
           Roving focus: arrow keys (Left/Right for horizontal, Up/Down for
           vertical), Home (first tab), End (last tab). Tabs not currently
-          focused are skipped by Tab key — only the active tab is in the tab
+          focused are skipped by Tab key. Only the active tab is in the tab
           order, matching the ARIA tabs spec.
         </li>
         <li>
@@ -278,11 +278,11 @@ export default function TabsPage() {
           consumer&apos;s child element receives the trigger&apos;s ARIA role
           (<code>role=&quot;tab&quot;</code>),{" "}
           <code>aria-selected</code>, <code>aria-controls</code>, and ref. The
-          substituted element must accept those attributes — anchors, buttons,
+          substituted element must accept those attributes. Anchors, buttons,
           and any forwardRef component work.
         </li>
         <li>
-          The active indicator bar is decorative — a CSS{" "}
+          The active indicator bar is decorative: a CSS{" "}
           <code>::after</code> pseudo-element driven by{" "}
           <code>data-state=&quot;active&quot;</code>. Not announced by screen
           readers; the role + aria-selected does the announcing.

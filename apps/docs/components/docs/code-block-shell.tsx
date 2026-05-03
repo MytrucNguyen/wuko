@@ -50,7 +50,7 @@ export function CodeBlockShell({
         setCopied(false);
       }, COPY_RESET_MS);
     } catch {
-      // Clipboard unavailable — silently no-op; consumers can hand-select.
+      // Clipboard unavailable. Silently no-op; consumers can hand-select.
     }
   }
 

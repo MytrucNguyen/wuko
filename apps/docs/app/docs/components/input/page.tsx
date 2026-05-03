@@ -10,7 +10,7 @@ import { Input } from "@/registry/default/ui/vex-input";
 import { PasswordExample } from "./password-example";
 
 export const metadata = {
-  title: "Input — VexKit",
+  title: "Input | VexKit",
 };
 
 const USAGE_SAMPLE = `import { Input } from "@/components/ui/vex-input";
@@ -110,7 +110,7 @@ const PROPS_ROWS = [
     type: "ReactNode",
     default: "—",
     description:
-      "Element inside the field on the right. Pointer events allowed — supports interactive controls like a password reveal toggle.",
+      "Element inside the field on the right. Pointer events allowed. Supports interactive controls like a password reveal toggle.",
   },
   {
     name: "type",
@@ -195,7 +195,7 @@ export default function InputPage() {
       <H2 id="icons">With icons</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
         Pass any <code>ReactNode</code> to <code>leftIcon</code> or{" "}
-        <code>rightIcon</code>. Left icons are decorative — pointer events are
+        <code>rightIcon</code>. Left icons are decorative. Pointer events are
         disabled so clicks fall through to the input. Right icons accept pointer
         events to support interactive controls (see Password below).
       </p>
@@ -219,7 +219,7 @@ export default function InputPage() {
         <code>error</code> replaces it with an error message, swaps the border
         to <code>--vex-danger-fg</code>, and sets{" "}
         <code>aria-invalid=&quot;true&quot;</code>. Visual and screen-reader
-        signals are coupled — the styling is driven from the ARIA attribute, so
+        signals are coupled. The styling is driven from the ARIA attribute, so
         you cannot show the error state without also announcing it.
       </p>
       <ExampleSurface>
@@ -241,7 +241,7 @@ export default function InputPage() {
       <H2 id="password">Password with toggle</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
         Compose <code>rightIcon</code> with a clickable visibility toggle. This
-        is the design intent behind the asymmetric icon slots — the right slot
+        is the design intent behind the asymmetric icon slots. The right slot
         accepts pointer events so an embedded button can receive clicks.
       </p>
       <ExampleSurface>
@@ -274,7 +274,7 @@ export default function InputPage() {
         </li>
         <li>
           Each input gets a stable id via <code>React.useId()</code>. The label
-          is linked via <code>htmlFor</code> — clicking the label focuses the
+          is linked via <code>htmlFor</code>; clicking the label focuses the
           input. Pass <code>id</code> to override.
         </li>
         <li>
@@ -292,7 +292,7 @@ export default function InputPage() {
           Focus uses{" "}
           <code>focus-visible:border-vex-accent</code> plus a soft{" "}
           <code>focus-visible:ring-vex-accent/30</code> ring inside the visual
-          frame — different convention from Button&apos;s external{" "}
+          frame, different convention from Button&apos;s external{" "}
           <code>focus-visible:outline</code>, because input fields conventionally
           show focus on the editable surface itself.
         </li>

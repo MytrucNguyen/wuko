@@ -7,7 +7,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { ToggleExample } from "./toggle-example";
 
 export const metadata = {
-  title: "Toggle — VexKit",
+  title: "Toggle | VexKit",
 };
 
 const USAGE_SAMPLE = `"use client";
@@ -54,7 +54,7 @@ const PROPS_ROWS = [
     type: "boolean",
     default: "—",
     description:
-      "Required. Whether the toggle is on. Toggle is fully controlled — manage this state in your component.",
+      "Required. Whether the toggle is on. Toggle is fully controlled. Manage this state in your component.",
   },
   {
     name: "onChange",
@@ -68,14 +68,14 @@ const PROPS_ROWS = [
     type: "string",
     default: "—",
     description:
-      "Optional inline label rendered next to the switch. HTML5 implicit label association — clicking the label area toggles the switch.",
+      "Optional inline label rendered next to the switch. HTML5 implicit label association: clicking the label area toggles the switch.",
   },
   {
     name: "size",
     type: '"sm" | "md"',
     default: '"md"',
     description:
-      "Two sizes available — sm for compact inline contexts (settings rows, table cells), md for standalone settings or form fields.",
+      "Two sizes available: sm for compact inline contexts (settings rows, table cells), md for standalone settings or form fields.",
   },
   {
     name: "disabled",
@@ -95,7 +95,7 @@ const PROPS_ROWS = [
     type: "ComponentPropsWithoutRef<typeof Switch.Root>",
     default: "—",
     description:
-      "Forwarded to the underlying Radix Switch.Root — id, name, value, form, aria-*, data-*, etc. Excludes the controlled-mode pair (checked, defaultChecked, onCheckedChange) to prevent control-mode mixing.",
+      "Forwarded to the underlying Radix Switch.Root: id, name, value, form, aria-*, data-*, etc. Excludes the controlled-mode pair (checked, defaultChecked, onCheckedChange) to prevent control-mode mixing.",
   },
 ];
 

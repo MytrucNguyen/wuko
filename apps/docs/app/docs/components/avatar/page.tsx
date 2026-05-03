@@ -7,7 +7,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { AvatarSizesExample, AvatarStatusExample } from "./avatar-example";
 
 export const metadata = {
-  title: "Avatar — VexKit",
+  title: "Avatar | VexKit",
 };
 
 const SIZES_SAMPLE = `import { Avatar } from "@/components/ui/vex-avatar";
@@ -87,7 +87,7 @@ const PROPS_ROWS = [
     type: "ComponentPropsWithoutRef<typeof Avatar.Root>",
     default: "—",
     description:
-      "Forwarded to the underlying Radix Avatar.Root — id, aria-*, data-*, onClick, etc. Excludes children (constructed internally) and size (redefined as a string union).",
+      "Forwarded to the underlying Radix Avatar.Root: id, aria-*, data-*, onClick, etc. Excludes children (constructed internally) and size (redefined as a string union).",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function AvatarPage() {
         </h1>
         <p className="text-[15px] leading-relaxed text-vex-text">
           A user&apos;s photo, initials, or fallback character built on Radix
-          Avatar — automatic image loading state with fallback during load
+          Avatar: automatic image loading state with fallback during load
           and on error. Supports sm/md/lg sizes plus an optional status dot
           for online/away/offline presence.
         </p>
@@ -122,7 +122,7 @@ export default function AvatarPage() {
 
       <H2 id="sizes">Sizes</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
-        Three sizes — sm (28px), md (40px), lg (56px). Pick by container
+        Three sizes: sm (28px), md (40px), lg (56px). Pick by container
         density: sm for table rows, md for inline mentions, lg for profile
         headers.
       </p>

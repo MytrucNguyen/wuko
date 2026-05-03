@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VexKit — A themeable React component library",
+  title: "VexKit | A themeable React component library",
   description:
     "Accessible, composable, themeable React components distributed as a shadcn-compatible registry.",
 };

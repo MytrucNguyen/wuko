@@ -1,6 +1,6 @@
 # Theming
 
-VexKit's public theming surface is a small set of CSS custom properties (`--vex-*`) on `:root`. Override any of them and every VexKit component picks up the new value — no rebuild, no JavaScript, no theme provider.
+VexKit's public theming surface is a small set of CSS custom properties (`--vex-*`) on `:root`. Override any of them and every VexKit component picks up the new value: no rebuild, no JavaScript, no theme provider.
 
 ## Public role tokens
 
@@ -80,16 +80,16 @@ To avoid flash-of-unstyled-content (FOUC), the docs app inlines a synchronous sc
 </head>
 ```
 
-The toggle button itself just flips `documentElement.dataset.theme` and writes the new value to `localStorage` — no React state, no `useEffect`, no hydration mismatch.
+The toggle button itself just flips `documentElement.dataset.theme` and writes the new value to `localStorage`: no React state, no `useEffect`, no hydration mismatch.
 
 ## What is NOT public
 
 These are internal and may change without notice:
 
-- **Raw color scales** (slate, teal, amber Tailwind palettes). Do not target `bg-ink-700`, `text-teal-300`, etc. directly — they are not exposed as Tailwind utilities. Use the `--vex-*` tokens.
+- **Raw color scales** (slate, teal, amber Tailwind palettes). Do not target `bg-ink-700`, `text-teal-300`, etc. directly. They are not exposed as Tailwind utilities. Use the `--vex-*` tokens.
 - **Per-component internal tokens** (button gradients, focus ring offsets, animation durations).
-- **The exact CSS in `globals.css`** — keyframes, scrollbar treatment, `.grid-bg` implementation. Override the role tokens; do not patch the rules.
-- **Spacing / radius / typography scales** — currently inherited from Tailwind defaults. Will be tokenized in a later phase if there's demand.
+- **The exact CSS in `globals.css`**: keyframes, scrollbar treatment, `.grid-bg` implementation. Override the role tokens; do not patch the rules.
+- **Spacing / radius / typography scales**: currently inherited from Tailwind defaults. Will be tokenized in a later phase if there's demand.
 
 ## WCAG AA contrast audit
 

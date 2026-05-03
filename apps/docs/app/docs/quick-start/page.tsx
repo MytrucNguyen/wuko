@@ -4,7 +4,7 @@ import { InfoCallout } from "@/components/docs/info-callout";
 import { Pager } from "@/components/docs/pager";
 
 export const metadata = {
-  title: "Quick Start — VexKit",
+  title: "Quick Start | VexKit",
 };
 
 const PROFILE_CARD_SAMPLE = `import { Avatar } from "@/components/ui/avatar";
@@ -45,7 +45,7 @@ export default function QuickStartPage() {
           Quick Start
         </h1>
         <p className="text-[15px] leading-relaxed text-vex-text">
-          Build a sign-in card in two minutes — composing VexKit&apos;s
+          Build a sign-in card in two minutes, composing VexKit&apos;s
           primitives the way they&apos;re meant to be composed.
         </p>
       </header>
@@ -67,7 +67,7 @@ export default function QuickStartPage() {
       <InfoCallout title="Illustrative for now">
         This sample previews the composition pattern. <code>Card</code>,{" "}
         <code>Input</code>, <code>Button</code>, and <code>Avatar</code> ship
-        from Phase 5 onward — install them via{" "}
+        from Phase 5 onward. Install them via{" "}
         <code>shadcn add</code> as they land, and this exact code will run.
       </InfoCallout>
 

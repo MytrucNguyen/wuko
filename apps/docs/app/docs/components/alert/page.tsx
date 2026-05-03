@@ -8,7 +8,7 @@ import { Alert } from "@/registry/default/ui/vex-alert";
 import { AlertCloseExample } from "./alert-example";
 
 export const metadata = {
-  title: "Alert — VexKit",
+  title: "Alert | VexKit",
 };
 
 const VARIANTS_SAMPLE = `import { Alert } from "@/components/ui/vex-alert";
@@ -71,7 +71,7 @@ const PROPS_ROWS = [
     type: "() => void",
     default: "—",
     description:
-      'When provided, renders a close button at the top-right corner with aria-label="Close". The Alert does not own the dismissed state — wire onClose to your own useState so the consumer controls visibility.',
+      'When provided, renders a close button at the top-right corner with aria-label="Close". The Alert does not own the dismissed state. Wire onClose to your own useState so the consumer controls visibility.',
   },
   {
     name: "children",
@@ -126,9 +126,9 @@ export default function AlertPage() {
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
         Four variants cover the typical message hierarchy. <code>info</code>{" "}
         and <code>success</code> render with{" "}
-        <code>role=&quot;status&quot;</code> (polite — queued by the screen
+        <code>role=&quot;status&quot;</code> (polite, queued by the screen
         reader). <code>warning</code> and <code>danger</code> render with{" "}
-        <code>role=&quot;alert&quot;</code> (assertive — interrupts the current
+        <code>role=&quot;alert&quot;</code> (assertive, interrupts the current
         announcement).
       </p>
       <ExampleSurface>
@@ -156,7 +156,7 @@ export default function AlertPage() {
       <ExampleSurface>
         <div className="space-y-3">
           <Alert variant="info" title="Heads up">
-            We just shipped two new components — Alert and Tabs.
+            We just shipped two new components: Alert and Tabs.
           </Alert>
           <Alert variant="danger" title="Build failed">
             3 of 12 tests failed. Check the logs for details.
@@ -168,7 +168,7 @@ export default function AlertPage() {
       <H2 id="close">Dismissible</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
         Pass an <code>onClose</code> callback to render a close button at the
-        top-right corner. The Alert does not own the dismissed state — wire{" "}
+        top-right corner. The Alert does not own the dismissed state. Wire{" "}
         <code>onClose</code> to your own <code>useState</code> so the consumer
         controls visibility.
       </p>
@@ -189,13 +189,13 @@ export default function AlertPage() {
         <li>
           ARIA role is variant-driven, not consumer-overridable.{" "}
           <code>info</code> and <code>success</code> use{" "}
-          <code>role=&quot;status&quot;</code> (polite — appended to the
+          <code>role=&quot;status&quot;</code> (polite, appended to the
           screen-reader queue without interrupting). <code>warning</code> and{" "}
           <code>danger</code> use <code>role=&quot;alert&quot;</code>{" "}
-          (assertive — interrupts the current announcement).
+          (assertive, interrupts the current announcement).
         </li>
         <li>
-          Variant icons are <code>aria-hidden=&quot;true&quot;</code> — they
+          Variant icons are <code>aria-hidden=&quot;true&quot;</code>. They
           are decorative duplicates of the role-driven semantic. Screen readers
           announce the role; sighted users see the icon.
         </li>
@@ -207,7 +207,7 @@ export default function AlertPage() {
         </li>
         <li>
           All variants pass WCAG AA for both title and body text on the tinted
-          surface in dark and light themes — lowest contrast 4.57:1 for
+          surface in dark and light themes: lowest contrast 4.57:1 for
           info-light and success-light titles.
         </li>
       </ul>

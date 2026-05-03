@@ -5,7 +5,7 @@ import { Pager } from "@/components/docs/pager";
 import { getRegistryItemUrl } from "@/lib/registry/base-url";
 
 export const metadata = {
-  title: "Installation — VexKit",
+  title: "Installation | VexKit",
 };
 
 const TOKENS_SNIPPET = `@import "tailwindcss";
@@ -96,7 +96,7 @@ export default function InstallationPage() {
       <H2 id="initialize-shadcn">1. Initialize shadcn</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
         VexKit components are distributed through the shadcn CLI. Run{" "}
-        <code>init</code> once in your project — it creates{" "}
+        <code>init</code> once in your project. It creates{" "}
         <code>components.json</code> and adds <code>lib/utils.ts</code> with the{" "}
         <code>cn</code> helper.
       </p>
@@ -138,7 +138,7 @@ export default function InstallationPage() {
         (per your <code>components.json</code> aliases). To verify the role
         tokens flip correctly, set{" "}
         <code>{'<html data-theme="light">'}</code> in your dev tools or your
-        layout — the component will switch to light values automatically.
+        layout. The component will switch to light values automatically.
       </p>
       <InfoCallout>
         Build a real theme toggle later, or copy VexKit&apos;s pattern from{" "}

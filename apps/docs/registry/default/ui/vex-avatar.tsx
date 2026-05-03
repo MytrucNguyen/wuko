@@ -34,7 +34,7 @@ const sizeClasses: Record<
 };
 
 // Away dot pinned to dark-mode #f59e0b (vex-warning-fg dark value) so it stays
-// vibrant in both themes — role-token's light-mode amber-800 ramp reads as
+// vibrant in both themes; role-token's light-mode amber-800 ramp reads as
 // "warning brown" rather than "user away". See the
 // status-indicator-fixed-hue-pin-to-dark-token-value rule.
 const statusColors: Record<AvatarStatus, string> = {

@@ -3,7 +3,7 @@
 @custom-variant light (&:where([data-theme="light"] *));
 
 :root {
-  /* Public role tokens — see THEMING.md */
+  /* Public role tokens. See THEMING.md */
   --vex-bg: #0f172a;
   --vex-card: #1e293b;
   --vex-border: #334155;
@@ -20,7 +20,7 @@
   --vex-warning-fg: #f59e0b;
   --vex-gold: #d4a017;
 
-  /* Decorative tokens — overridable, used by .grid-bg */
+  /* Decorative tokens (overridable, used by .grid-bg) */
   --vex-grid-line: rgba(51, 65, 85, 0.35);
   --vex-grid-glow: rgba(94, 234, 212, 0.18);
 
@@ -110,7 +110,7 @@ body {
   background-position: center top, center, center;
 }
 
-/* Keyboard focus ring — opt-in via class */
+/* Keyboard focus ring: opt-in via class */
 .vk-ring:focus-visible {
   outline: 2px solid var(--vex-accent);
   outline-offset: 2px;
@@ -157,7 +157,7 @@ body {
    no inline color rule. We pick which variable applies based on [data-theme].
    Token spans only carry foreground color; the surrounding card surface shows
    through the transparent <pre>. (--shiki-*-bg cascades from <pre>, so applying
-   it on spans would tile per-token bg patches — see memory:
+   it on spans would tile per-token bg patches. See memory:
    feedback_css_var_only_at_declaring_element.) */
 .vex-shiki .shiki,
 .vex-shiki .shiki span {

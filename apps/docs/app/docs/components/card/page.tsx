@@ -6,7 +6,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { Card } from "@/registry/default/ui/vex-card";
 
 export const metadata = {
-  title: "Card — VexKit",
+  title: "Card | VexKit",
 };
 
 const USAGE_SAMPLE = `import { Card } from "@/components/ui/vex-card";
@@ -74,7 +74,7 @@ export default function CardPage() {
 
       <H2 id="usage">Usage</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
-        Card is a plain styled <code>&lt;div&gt;</code> — no variants, no
+        Card is a plain styled <code>&lt;div&gt;</code>: no variants, no
         compound subcomponents. Wrap your content and customize via{" "}
         <code>className</code> when needed.
       </p>

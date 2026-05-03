@@ -7,7 +7,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { ModalExample } from "./modal-example";
 
 export const metadata = {
-  title: "Modal — VexKit",
+  title: "Modal | VexKit",
 };
 
 const USAGE_SAMPLE = `"use client";
@@ -48,7 +48,7 @@ const PROPS_ROWS = [
     type: "boolean",
     default: "—",
     description:
-      "Required. Whether the dialog is visible. Modal is fully controlled — manage this state in your component.",
+      "Required. Whether the dialog is visible. Modal is fully controlled. Manage this state in your component.",
   },
   {
     name: "onClose",
@@ -128,7 +128,7 @@ export default function ModalPage() {
         Modal is fully controlled. Hold the open state in your component,
         render the trigger separately, and pass <code>open</code> and{" "}
         <code>onClose</code> down. Radix handles focus trap, ESC,
-        click-outside, and ARIA wiring — your code just decides when the
+        click-outside, and ARIA wiring. Your code just decides when the
         dialog is visible.
       </p>
       <ExampleSurface>
@@ -147,7 +147,7 @@ export default function ModalPage() {
       <ul className="mt-2 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-vex-text">
         <li>
           <strong>Focus trap.</strong> While open, keyboard focus is trapped
-          inside the dialog — Tab and Shift-Tab cycle through the
+          inside the dialog. Tab and Shift-Tab cycle through the
           dialog&apos;s focusable elements only. Implemented by Radix&apos;s{" "}
           <code>FocusScope</code> primitive.
         </li>
@@ -193,8 +193,8 @@ export default function ModalPage() {
         <li>
           <strong>Consumer responsibility.</strong> You render the trigger
           (typically a Button) and manage <code>open</code> state. Modal
-          handles everything inside the dialog — focus, ARIA, dismiss, scroll
-          lock — so the consumer doesn&apos;t need to wire those up.
+          handles everything inside the dialog (focus, ARIA, dismiss, scroll
+          lock) so the consumer doesn&apos;t need to wire those up.
         </li>
       </ul>
 

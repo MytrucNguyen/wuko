@@ -61,7 +61,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     type: "registry:ui",
     title: "Card",
     description:
-      "A surface container with padding, a border, and a subtle background. The base for most layout compositions — forwards className and all native div attributes.",
+      "A surface container with padding, a border, and a subtle background. The base for most layout compositions. Forwards className and all native div attributes.",
     author: REGISTRY_AUTHOR,
     files: [
       {
@@ -94,7 +94,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     type: "registry:ui",
     title: "Badge",
     description:
-      "Compact status indicator. Six variants — default, teal, success, warning, danger, outline — using the role-token color set with tinted backgrounds and matching foreground text.",
+      "Compact status indicator. Six variants (default, teal, success, warning, danger, outline) using the role-token color set with tinted backgrounds and matching foreground text.",
     author: REGISTRY_AUTHOR,
     files: [
       {
@@ -127,7 +127,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     type: "registry:ui",
     title: "Tooltip",
     description:
-      "A short, hover- or focus-revealed label built on Radix Tooltip. Uncontrolled — Radix manages open/close internally; consumers pass content (the body) and children (the trigger). Each Tooltip is self-contained with its own Provider, so no app-root wrap is needed.",
+      "A short, hover- or focus-revealed label built on Radix Tooltip. Uncontrolled: Radix manages open/close internally; consumers pass content (the body) and children (the trigger). Each Tooltip is self-contained with its own Provider, so no app-root wrap is needed.",
     author: REGISTRY_AUTHOR,
     dependencies: ["@radix-ui/react-tooltip"],
     files: [
@@ -144,7 +144,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     type: "registry:ui",
     title: "Avatar",
     description:
-      "A user's photo, initials, or fallback character built on Radix Avatar — automatic image loading state with fallback during load and on error. Supports sm/md/lg sizes plus an optional status dot for online/away/offline presence.",
+      "A user's photo, initials, or fallback character built on Radix Avatar: automatic image loading state with fallback during load and on error. Supports sm/md/lg sizes plus an optional status dot for online/away/offline presence.",
     author: REGISTRY_AUTHOR,
     dependencies: ["@radix-ui/react-avatar"],
     files: [

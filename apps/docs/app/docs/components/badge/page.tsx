@@ -6,7 +6,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { Badge } from "@/registry/default/ui/vex-badge";
 
 export const metadata = {
-  title: "Badge — VexKit",
+  title: "Badge | VexKit",
 };
 
 const VARIANTS_SAMPLE = `<Badge>Default</Badge>
@@ -42,7 +42,7 @@ const PROPS_ROWS = [
     type: "HTMLAttributes<HTMLSpanElement>",
     default: "—",
     description:
-      "All native span attributes are forwarded — id, aria-*, data-*, onClick, etc.",
+      "All native span attributes are forwarded: id, aria-*, data-*, onClick, etc.",
   },
 ];
 
@@ -65,8 +65,8 @@ export default function BadgePage() {
           Badge
         </h1>
         <p className="text-[15px] leading-relaxed text-vex-text">
-          Compact status indicator. Six variants — default, teal, success,
-          warning, danger, outline — using the role-token color set with
+          Compact status indicator. Six variants (default, teal, success,
+          warning, danger, outline) using the role-token color set with
           tinted backgrounds and matching foreground text.
         </p>
       </header>

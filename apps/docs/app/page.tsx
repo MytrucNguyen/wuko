@@ -9,7 +9,7 @@ const FEATURES = [
     icon: Palette,
     title: "Themeable",
     description:
-      "Token-based design system. Override any color, radius, or spacing with CSS variables — no rebuild required.",
+      "Token-based design system. Override any color, radius, or spacing with CSS variables. No rebuild required.",
   },
   {
     icon: Layers,

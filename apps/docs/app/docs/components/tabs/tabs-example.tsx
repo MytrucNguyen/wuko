@@ -76,7 +76,7 @@ export function TabsControlledExample() {
   );
 }
 
-// preventDefault on the anchors below is docs-demo-only — in real usage you'd
+// preventDefault on the anchors below is docs-demo-only; in real usage you'd
 // let the anchor navigate (or pass a Next <Link>) so the URL syncs with the
 // active tab. The docs already navigate via the docs router; we don't want
 // stray hash changes here.

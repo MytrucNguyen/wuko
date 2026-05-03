@@ -8,7 +8,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { Button } from "@/registry/default/ui/vex-button";
 
 export const metadata = {
-  title: "Button — VexKit",
+  title: "Button | VexKit",
 };
 
 const USAGE_SAMPLE = `import { Button } from "@/components/ui/vex-button";
@@ -71,7 +71,7 @@ const PROPS_ROWS = [
     type: '"sm" | "md" | "lg" | "icon-xs" | "icon-sm" | "icon" | "icon-lg"',
     default: '"md"',
     description:
-      "Controls dimensions, padding, and font size. The icon-* sizes are square — use them for icon-only buttons with an aria-label.",
+      "Controls dimensions, padding, and font size. The icon-* sizes are square. Use them for icon-only buttons with an aria-label.",
   },
   {
     name: "loading",
@@ -114,7 +114,7 @@ export default function ButtonPage() {
         </h1>
         <p className="text-[15px] leading-relaxed text-vex-text">
           Triggers an action. Buttons are how users commit to a primary,
-          contextual, or destructive intent — pick the variant that matches the
+          contextual, or destructive intent. Pick the variant that matches the
           weight of the action.
         </p>
       </header>
@@ -191,7 +191,7 @@ export default function ButtonPage() {
 
       <H2 id="icon-button">Icon button</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-vex-text">
-        Square sizes for icon-only triggers — <code>icon-xs</code>,{" "}
+        Square sizes for icon-only triggers: <code>icon-xs</code>,{" "}
         <code>icon-sm</code>, <code>icon</code>, and <code>icon-lg</code>. An{" "}
         <code>aria-label</code> is required so the button has an accessible
         name.

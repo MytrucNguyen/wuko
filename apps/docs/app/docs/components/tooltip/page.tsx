@@ -7,7 +7,7 @@ import { PropsTable } from "@/components/docs/props-table";
 import { TooltipExample } from "./tooltip-example";
 
 export const metadata = {
-  title: "Tooltip — VexKit",
+  title: "Tooltip | VexKit",
 };
 
 const USAGE_SAMPLE = `import { Bell, Trash2, Zap } from "lucide-react";
@@ -46,7 +46,7 @@ const PROPS_ROWS = [
     type: "ReactNode",
     default: "—",
     description:
-      "Required. The tooltip body — a label, hint, or short description of the trigger.",
+      "Required. The tooltip body: a label, hint, or short description of the trigger.",
   },
   {
     name: "children",
@@ -88,7 +88,7 @@ const PROPS_ROWS = [
     type: "ComponentPropsWithoutRef<typeof Tooltip.Content>",
     default: "—",
     description:
-      "Forwarded to the underlying Radix Tooltip.Content — id, aria-label, data-*, onEscapeKeyDown, onPointerDownOutside, etc. Excludes children (which we use as the trigger), side, sideOffset, and asChild.",
+      "Forwarded to the underlying Radix Tooltip.Content: id, aria-label, data-*, onEscapeKeyDown, onPointerDownOutside, etc. Excludes children (which we use as the trigger), side, sideOffset, and asChild.",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function TooltipPage() {
         </h1>
         <p className="text-[15px] leading-relaxed text-vex-text">
           A short, hover- or focus-revealed label built on Radix Tooltip.
-          Uncontrolled — Radix manages open/close internally; consumers pass{" "}
+          Uncontrolled: Radix manages open/close internally; consumers pass{" "}
           <code>content</code> (the body) and <code>children</code> (the
           trigger). Each Tooltip is self-contained with its own Provider, so
           no app-root wrap is needed.

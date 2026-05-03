@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Pager } from "@/components/docs/pager";
 
 export const metadata = {
-  title: "Components — VexKit",
+  title: "Components | VexKit",
 };
 
 const COMPONENTS = [
