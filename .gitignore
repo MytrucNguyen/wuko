@@ -12,6 +12,7 @@ out/
 
 # logs
 *.log
+.dev-*.pid
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*

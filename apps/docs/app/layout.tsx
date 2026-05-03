@@ -5,6 +5,8 @@ import { Footer } from "@/components/shell/footer";
 import { Header } from "@/components/shell/header";
 import { MobileNavDrawer } from "@/components/shell/mobile-nav-drawer";
 import { MobileNavProvider } from "@/components/shell/mobile-nav-provider";
+import { SearchDialog } from "@/components/shell/search-dialog";
+import { SearchProvider } from "@/components/shell/search-provider";
 
 import "./globals.css";
 
@@ -33,18 +35,22 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="font-sans antialiased flex min-h-screen flex-col">
-        <MobileNavProvider>
-          <Header />
-          <MobileNavDrawer />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </MobileNavProvider>
+        <SearchProvider>
+          <MobileNavProvider>
+            <Header />
+            <SearchDialog />
+            <MobileNavDrawer />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </MobileNavProvider>
+        </SearchProvider>
       </body>
     </html>
   );

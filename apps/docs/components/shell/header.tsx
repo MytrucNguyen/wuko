@@ -6,6 +6,8 @@ import Link from "next/link";
 
 import { GithubMark } from "@/components/icons/github";
 import { useMobileNav } from "@/components/shell/mobile-nav-provider";
+import { MobileSearchTrigger } from "@/components/shell/mobile-search-trigger";
+import { SearchTrigger } from "@/components/shell/search-trigger";
 import { ThemeToggle } from "@/components/shell/theme-toggle";
 
 export function Header() {
@@ -47,7 +49,9 @@ export function Header() {
 
         <div className="flex-1" />
 
-        <div className="hidden h-9 w-72 md:block" aria-hidden />
+        <SearchTrigger />
+
+        <MobileSearchTrigger />
 
         <a
           href="https://github.com/MytrucNguyen/vexkit"

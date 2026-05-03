@@ -55,7 +55,7 @@ export function CodeBlockShell({
   }
 
   return (
-    <div className="overflow-hidden rounded-lg border border-vex-border bg-vex-card/40">
+    <div data-pagefind-ignore className="overflow-hidden rounded-lg border border-vex-border bg-vex-card/40">
       <div className="flex min-h-9 items-center justify-between gap-3 border-b border-vex-border/70 bg-vex-card/60 px-3.5 py-2">
         <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-vex-text-muted">
           <Code2 aria-hidden="true" className="h-3.5 w-3.5" />

@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "pnpm validate:registry && pnpm generate:registry-static",
     "dev": "next dev",
-    "build": "pnpm validate:registry && next build",
+    "prebuild": "pnpm validate:registry && pnpm generate:registry-static",
+    "build": "next build && pagefind --site out --output-path out/_pagefind",
+    "postbuild": "pnpm sync:pagefind-dev",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "validate:registry": "tsx scripts/validate-registry.ts"
+    "validate:registry": "tsx scripts/validate-registry.ts",
+    "generate:registry-static": "tsx scripts/generate-registry-static.ts",
+    "sync:pagefind-dev": "tsx scripts/sync-pagefind-dev.ts"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",
@@ -17,6 +22,7 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
     "class-variance-authority": "^0.7.1",
+    "cmdk": "^1.1.1",
     "lucide-react": "^1.11.0",
     "next": "16.2.4",
     "react": "19.2.4",
@@ -31,6 +37,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "pagefind": "1.5.2",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"
