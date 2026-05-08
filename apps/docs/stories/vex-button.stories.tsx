@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
+import { ArrowRight, Zap } from "lucide-react";
+
 import { Button } from "@/registry/default/ui/vex-button";
 
 const meta = {
@@ -45,3 +47,58 @@ export const Large: Story = { args: { size: "lg" } };
 
 export const Disabled: Story = { args: { disabled: true } };
 export const Loading: Story = { args: { loading: true } };
+
+export const WithLeadingIcon: Story = {
+  args: {
+    children: (
+      <>
+        <Zap className="size-4" />
+        Deploy
+      </>
+    ),
+  },
+};
+
+export const WithTrailingIcon: Story = {
+  args: {
+    variant: "outline",
+    children: (
+      <>
+        Continue
+        <ArrowRight className="size-4" />
+      </>
+    ),
+  },
+};
+
+export const IconXs: Story = {
+  args: {
+    size: "icon-xs",
+    "aria-label": "Deploy",
+    children: <Zap className="size-3.5" />,
+  },
+};
+
+export const IconSm: Story = {
+  args: {
+    size: "icon-sm",
+    "aria-label": "Deploy",
+    children: <Zap className="size-4" />,
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    size: "icon",
+    "aria-label": "Deploy",
+    children: <Zap className="size-4" />,
+  },
+};
+
+export const IconLg: Story = {
+  args: {
+    size: "icon-lg",
+    "aria-label": "Deploy",
+    children: <Zap className="size-5" />,
+  },
+};
