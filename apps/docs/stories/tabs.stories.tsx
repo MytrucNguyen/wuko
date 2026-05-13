@@ -2,13 +2,13 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { useState } from "react";
 
-import { Button } from "@/registry/default/ui/vex-button";
+import { Button } from "@/registry/default/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/vex-tabs";
+} from "@/registry/default/ui/tabs";
 
 const meta = {
   title: "Components/Tabs",

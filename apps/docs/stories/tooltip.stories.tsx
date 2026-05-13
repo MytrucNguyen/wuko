@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Bell, Trash2, Zap } from "lucide-react";
 
-import { Button } from "@/registry/default/ui/vex-button";
-import { Tooltip } from "@/registry/default/ui/vex-tooltip";
+import { Button } from "@/registry/default/ui/button";
+import { Tooltip } from "@/registry/default/ui/tooltip";
 
 const meta = {
   title: "Components/Tooltip",

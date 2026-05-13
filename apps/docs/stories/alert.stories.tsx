@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { useState } from "react";
 
-import { Alert } from "@/registry/default/ui/vex-alert";
+import { Alert } from "@/registry/default/ui/alert";
 
 const meta = {
   title: "Components/Alert",

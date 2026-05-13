@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { useState } from "react";
 
-import { Toggle } from "@/registry/default/ui/vex-toggle";
+import { Toggle } from "@/registry/default/ui/toggle";
 
 const meta = {
   title: "Components/Toggle",

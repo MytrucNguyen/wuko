@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 
-import { Button } from "@/registry/default/ui/vex-button";
+import { Button } from "@/registry/default/ui/button";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/vex-tabs";
+} from "@/registry/default/ui/tabs";
 
 export function TabsUncontrolledExample() {
   return (

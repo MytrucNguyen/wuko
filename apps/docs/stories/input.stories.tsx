@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { useState } from "react";
 import { Eye, EyeOff, Mail, Search } from "lucide-react";
 
-import { Input } from "@/registry/default/ui/vex-input";
+import { Input } from "@/registry/default/ui/input";
 
 const meta = {
   title: "Components/Input",

@@ -6,7 +6,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/vex-tabs";
+} from "@/registry/default/ui/tabs";
 
 export interface InstallationTabsProps {
   name: string;

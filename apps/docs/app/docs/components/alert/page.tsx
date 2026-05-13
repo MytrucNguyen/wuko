@@ -3,7 +3,7 @@ import { H2 } from "@/components/docs/h2";
 import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
-import { Alert } from "@/registry/default/ui/vex-alert";
+import { Alert } from "@/registry/default/ui/alert";
 
 import { AlertCloseExample } from "./alert-example";
 

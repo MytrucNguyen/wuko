@@ -7,7 +7,7 @@ export const REGISTRY_NAME = "vexkit";
 
 export const REGISTRY_ITEMS: RegistrySource[] = [
   {
-    name: "vex-placeholder",
+    name: "placeholder",
     type: "registry:ui",
     title: "Placeholder",
     description:
@@ -15,15 +15,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     author: REGISTRY_AUTHOR,
     files: [
       {
-        diskPath: "registry/default/ui/vex-placeholder.tsx",
-        registryPath: "ui/vex-placeholder.tsx",
+        diskPath: "registry/default/ui/placeholder.tsx",
+        registryPath: "ui/placeholder.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-button",
+    name: "button",
     type: "registry:ui",
     title: "Button",
     description:
@@ -32,15 +32,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["class-variance-authority"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-button.tsx",
-        registryPath: "ui/vex-button.tsx",
+        diskPath: "registry/default/ui/button.tsx",
+        registryPath: "ui/button.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-input",
+    name: "input",
     type: "registry:ui",
     title: "Input",
     description:
@@ -49,15 +49,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["class-variance-authority"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-input.tsx",
-        registryPath: "ui/vex-input.tsx",
+        diskPath: "registry/default/ui/input.tsx",
+        registryPath: "ui/input.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-card",
+    name: "card",
     type: "registry:ui",
     title: "Card",
     description:
@@ -65,15 +65,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     author: REGISTRY_AUTHOR,
     files: [
       {
-        diskPath: "registry/default/ui/vex-card.tsx",
-        registryPath: "ui/vex-card.tsx",
+        diskPath: "registry/default/ui/card.tsx",
+        registryPath: "ui/card.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-modal",
+    name: "modal",
     type: "registry:ui",
     title: "Modal",
     description:
@@ -82,15 +82,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["@radix-ui/react-dialog"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-modal.tsx",
-        registryPath: "ui/vex-modal.tsx",
+        diskPath: "registry/default/ui/modal.tsx",
+        registryPath: "ui/modal.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-badge",
+    name: "badge",
     type: "registry:ui",
     title: "Badge",
     description:
@@ -98,15 +98,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     author: REGISTRY_AUTHOR,
     files: [
       {
-        diskPath: "registry/default/ui/vex-badge.tsx",
-        registryPath: "ui/vex-badge.tsx",
+        diskPath: "registry/default/ui/badge.tsx",
+        registryPath: "ui/badge.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-toggle",
+    name: "toggle",
     type: "registry:ui",
     title: "Toggle",
     description:
@@ -115,15 +115,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["@radix-ui/react-switch"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-toggle.tsx",
-        registryPath: "ui/vex-toggle.tsx",
+        diskPath: "registry/default/ui/toggle.tsx",
+        registryPath: "ui/toggle.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-tooltip",
+    name: "tooltip",
     type: "registry:ui",
     title: "Tooltip",
     description:
@@ -132,15 +132,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["@radix-ui/react-tooltip"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-tooltip.tsx",
-        registryPath: "ui/vex-tooltip.tsx",
+        diskPath: "registry/default/ui/tooltip.tsx",
+        registryPath: "ui/tooltip.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-avatar",
+    name: "avatar",
     type: "registry:ui",
     title: "Avatar",
     description:
@@ -149,15 +149,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["@radix-ui/react-avatar"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-avatar.tsx",
-        registryPath: "ui/vex-avatar.tsx",
+        diskPath: "registry/default/ui/avatar.tsx",
+        registryPath: "ui/avatar.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-alert",
+    name: "alert",
     type: "registry:ui",
     title: "Alert",
     description:
@@ -166,15 +166,15 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["lucide-react"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-alert.tsx",
-        registryPath: "ui/vex-alert.tsx",
+        diskPath: "registry/default/ui/alert.tsx",
+        registryPath: "ui/alert.tsx",
         type: "registry:ui",
         target: "",
       },
     ],
   },
   {
-    name: "vex-tabs",
+    name: "tabs",
     type: "registry:ui",
     title: "Tabs",
     description:
@@ -183,8 +183,8 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     dependencies: ["@radix-ui/react-tabs"],
     files: [
       {
-        diskPath: "registry/default/ui/vex-tabs.tsx",
-        registryPath: "ui/vex-tabs.tsx",
+        diskPath: "registry/default/ui/tabs.tsx",
+        registryPath: "ui/tabs.tsx",
         type: "registry:ui",
         target: "",
       },

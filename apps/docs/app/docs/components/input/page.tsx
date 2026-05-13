@@ -5,7 +5,7 @@ import { H2 } from "@/components/docs/h2";
 import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
-import { Input } from "@/registry/default/ui/vex-input";
+import { Input } from "@/registry/default/ui/input";
 
 import { PasswordExample } from "./password-example";
 

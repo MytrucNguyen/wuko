@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { Badge } from "@/registry/default/ui/vex-badge";
+import { Badge } from "@/registry/default/ui/badge";
 
 const meta = {
   title: "Components/Badge",

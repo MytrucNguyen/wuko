@@ -1,4 +1,4 @@
-import { Avatar } from "@/registry/default/ui/vex-avatar";
+import { Avatar } from "@/registry/default/ui/avatar";
 
 export function AvatarSizesExample() {
   return (

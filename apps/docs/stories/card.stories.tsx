@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import Image from "next/image";
 
-import { Card } from "@/registry/default/ui/vex-card";
+import { Card } from "@/registry/default/ui/card";
 
 const meta = {
   title: "Components/Card",

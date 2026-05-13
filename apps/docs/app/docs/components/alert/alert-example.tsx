@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { Button } from "@/registry/default/ui/vex-button";
-import { Alert } from "@/registry/default/ui/vex-alert";
+import { Button } from "@/registry/default/ui/button";
+import { Alert } from "@/registry/default/ui/alert";
 
 export function AlertCloseExample() {
   const [open, setOpen] = useState(true);

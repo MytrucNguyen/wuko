@@ -1,18 +1,18 @@
 import { ArrowRight, Mail, Search, Trash2, Zap } from "lucide-react";
 import Link from "next/link";
 
-import { Alert } from "@/registry/default/ui/vex-alert";
-import { Avatar } from "@/registry/default/ui/vex-avatar";
-import { Badge } from "@/registry/default/ui/vex-badge";
-import { Button } from "@/registry/default/ui/vex-button";
-import { Card } from "@/registry/default/ui/vex-card";
-import { Input } from "@/registry/default/ui/vex-input";
+import { Alert } from "@/registry/default/ui/alert";
+import { Avatar } from "@/registry/default/ui/avatar";
+import { Badge } from "@/registry/default/ui/badge";
+import { Button } from "@/registry/default/ui/button";
+import { Card } from "@/registry/default/ui/card";
+import { Input } from "@/registry/default/ui/input";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/ui/vex-tabs";
+} from "@/registry/default/ui/tabs";
 
 const PANEL_CLASSES =
   "flex min-h-[260px] flex-wrap items-center justify-center gap-3 rounded-lg border border-wuko-border bg-wuko-card/40 p-6 sm:p-10";

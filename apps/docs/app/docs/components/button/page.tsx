@@ -5,7 +5,7 @@ import { H2 } from "@/components/docs/h2";
 import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
-import { Button } from "@/registry/default/ui/vex-button";
+import { Button } from "@/registry/default/ui/button";
 
 export const metadata = {
   title: "Button | VexKit",

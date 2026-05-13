@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { Button } from "@/registry/default/ui/vex-button";
-import { Modal } from "@/registry/default/ui/vex-modal";
+import { Button } from "@/registry/default/ui/button";
+import { Modal } from "@/registry/default/ui/modal";
 
 export function ModalExample() {
   const [open, setOpen] = useState(false);

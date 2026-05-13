@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Toggle } from "@/registry/default/ui/vex-toggle";
+import { Toggle } from "@/registry/default/ui/toggle";
 
 export function ToggleExample() {
   const [notifications, setNotifications] = useState(true);

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { ArrowRight, Zap } from "lucide-react";
 
-import { Button } from "@/registry/default/ui/vex-button";
+import { Button } from "@/registry/default/ui/button";
 
 const meta = {
   title: "Components/Button",

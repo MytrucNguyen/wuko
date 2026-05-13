@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
-import { Input } from "@/registry/default/ui/vex-input";
+import { Input } from "@/registry/default/ui/input";
 
 export function PasswordExample() {
   const [show, setShow] = useState(false);
