@@ -100,7 +100,7 @@ export function CodeBlockShell({
         }
       >
         <div
-          className="vex-shiki overflow-x-auto p-4 text-[12.5px] leading-relaxed"
+          className="wuko-shiki overflow-x-auto p-4 text-[12.5px] leading-relaxed"
           dangerouslySetInnerHTML={{ __html: html }}
         />
         {!expanded && (

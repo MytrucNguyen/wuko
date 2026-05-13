@@ -156,16 +156,16 @@ body {
    through the transparent <pre>. (--shiki-*-bg cascades from <pre>, so applying
    it on spans would tile per-token bg patches. See memory:
    feedback_css_var_only_at_declaring_element.) */
-.vex-shiki .shiki,
-.vex-shiki .shiki span {
+.wuko-shiki .shiki,
+.wuko-shiki .shiki span {
   color: var(--shiki-dark);
   font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 }
-[data-theme="light"] .vex-shiki .shiki,
-[data-theme="light"] .vex-shiki .shiki span {
+[data-theme="light"] .wuko-shiki .shiki,
+[data-theme="light"] .wuko-shiki .shiki span {
   color: var(--shiki-light);
 }
-.vex-shiki .shiki {
+.wuko-shiki .shiki {
   background: transparent;
 }
 
