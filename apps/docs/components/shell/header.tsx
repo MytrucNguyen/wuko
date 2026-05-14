@@ -31,7 +31,7 @@ export function Header() {
           className="wk-ring inline-flex select-none items-center gap-2.5 rounded"
         >
           <Image
-            src="/vex.png"
+            src="/brand/wuko.png"
             alt=""
             width={26}
             height={26}

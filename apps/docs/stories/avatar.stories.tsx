@@ -36,7 +36,7 @@ export const Large: Story = { args: { size: "lg" } };
 
 export const WithImage: Story = {
   args: {
-    src: "/vex.png",
+    src: "/brand/wuko.png",
     alt: "Vex, the Wuko mascot",
     size: "lg",
   },

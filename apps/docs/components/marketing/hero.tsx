@@ -11,7 +11,7 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-8 pb-24 pt-20 lg:pb-32 lg:pt-28">
         <div className="flex flex-col items-center text-center">
           <Image
-            src="/vex.png"
+            src="/brand/wuko.png"
             alt="Vex"
             width={144}
             height={144}

@@ -18,7 +18,7 @@ export function ProfileRow() {
       <Avatar fallback="VK" size="sm" />
       <Avatar fallback="VK" size="md" />
       <Avatar
-        src="/vex.png"
+        src="/brand/wuko.png"
         alt="Vex, the Wuko mascot"
         fallback="VK"
         size="lg"

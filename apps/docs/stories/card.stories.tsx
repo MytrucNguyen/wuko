@@ -46,7 +46,7 @@ export const WithImage: Story = {
   render: () => (
     <Card className="max-w-sm overflow-hidden p-0">
       <Image
-        src="/vex.png"
+        src="/brand/wuko.png"
         alt="Vex, the Wuko mascot"
         width={384}
         height={160}

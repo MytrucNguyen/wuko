@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 lg:px-6">
         <div className="flex items-center gap-2.5">
           <Image
-            src="/vex.png"
+            src="/brand/wuko.png"
             alt=""
             width={36}
             height={36}
