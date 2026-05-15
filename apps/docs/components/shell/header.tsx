@@ -9,9 +9,12 @@ import { useMobileNav } from "@/components/shell/mobile-nav-provider";
 import { MobileSearchTrigger } from "@/components/shell/mobile-search-trigger";
 import { SearchTrigger } from "@/components/shell/search-trigger";
 import { ThemeToggle } from "@/components/shell/theme-toggle";
+import { usePathname } from "next/navigation"; 
 
 export function Header() {
   const { open, openDrawer, closeDrawer } = useMobileNav();
+  const pathname = usePathname();
+  const hasSidebar = pathname.startsWith("/docs");
 
   return (
     <header className="sticky top-0 z-50 h-14 border-b border-wuko-border bg-wuko-bg/85 backdrop-blur">
@@ -20,7 +23,9 @@ export function Header() {
           type="button"
           onClick={() => (open ? closeDrawer() : openDrawer())}
           aria-label={open ? "Close navigation" : "Open navigation"}
-          className="wk-ring text-wuko-text transition-colors hover:text-wuko-heading"
+          className={`wk-ring text-wuko-text transition-colors hover:text-wuko-heading ${
+            hasSidebar ? "lg:hidden" : ""
+          }`}
         >
           {open ? <X size={18} aria-hidden /> : <Menu size={18} aria-hidden />}
         </button>
@@ -33,9 +38,9 @@ export function Header() {
           <Image
             src="/brand/wuko.png"
             alt=""
-            width={26}
-            height={26}
-            className="rounded-lg object-contain -translate-y-0.5"
+            width={32}
+            height={32}
+            className="rounded-lg object-contain"
             aria-hidden
           />
           <span className="text-[18px] font-extrabold tracking-tight text-wuko-heading">

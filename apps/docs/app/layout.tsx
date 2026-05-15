@@ -21,9 +21,33 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://wuko.dev"),
   title: "Wuko | A themeable React component library",
   description:
     "Accessible, composable, themeable React components distributed as a shadcn-compatible registry.",
+  openGraph: {
+    title: "Wuko | A themeable React component library",
+    description:
+      "Accessible, composable, themeable React components distributed as a shadcn-compatible registry.",
+    url: "https://wuko.dev",
+    siteName: "Wuko",
+    images: [
+      {
+        url: "/brand/wuko.png", // ideally a 1200x630 image
+        width: 1200,
+        height: 630,
+        alt: "Wuko",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wuko | A themeable React component library",
+    description:
+      "Accessible, composable, themeable React components distributed as a shadcn-compatible registry.",
+    images: ["/brand/wuko.png"],
+  },
 };
 
 const themeScript = `(function(){try{var t=localStorage.getItem('wuko-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark'}catch(e){document.documentElement.dataset.theme='dark'}})();`;

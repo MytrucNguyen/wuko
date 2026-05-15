@@ -47,8 +47,7 @@ export function NavList({ onNavigate }: NavListProps) {
               href={section.path}
               data-active={pathname === section.path}
               onClick={onNavigate}
-              className="nav-link mb-2 block rounded-md px-3 text-[11px] font-semibold uppercase tracking-wider text-wuko-text-muted transition-colors hover:text-wuko-heading"
-            >
+              className="nav-link mb-2 block rounded-md px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-wuko-text-muted transition-colors hover:text-wuko-heading"            >
               {section.title}
             </Link>
           ) : (

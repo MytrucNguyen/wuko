@@ -31,7 +31,7 @@ export function PeekInsideKit() {
         </div>
         <Link
           href="/docs/components"
-          className="wk-ring hidden items-center gap-1.5 rounded text-sm font-medium text-wuko-accent transition-colors hover:underline underline-offset-4 sm:inline-flex"
+          className="wk-ring inline-flex items-center gap-1.5 rounded text-sm font-medium text-wuko-accent transition-colors hover:underline underline-offset-4"
         >
           Browse all
           <ArrowRight size={14} aria-hidden />

@@ -13,17 +13,22 @@ export interface InstallationTabsProps {
 }
 
 export async function InstallationTabs({ name }: InstallationTabsProps) {
-  const installCommand = `npx shadcn@latest add ${getRegistryItemUrl(name)}`;
+  const namespacedCommand = `npx shadcn@latest add @wuko/${name}`;
+  const urlCommand = `npx shadcn@latest add ${getRegistryItemUrl(name)}`;
   const sourceContent = await getRegistrySource(name);
 
   return (
     <Tabs defaultValue="command" className="mb-3">
       <TabsList>
         <TabsTrigger value="command">Command</TabsTrigger>
+        <TabsTrigger value="url">URL</TabsTrigger>
         <TabsTrigger value="manual">Manual</TabsTrigger>
       </TabsList>
       <TabsContent value="command">
-        <CodeBlock filename="terminal" lang="bash" code={installCommand} />
+        <CodeBlock filename="terminal" lang="bash" code={namespacedCommand} />
+      </TabsContent>
+      <TabsContent value="url">
+        <CodeBlock filename="terminal" lang="bash" code={urlCommand} />
       </TabsContent>
       <TabsContent value="manual">
         <CodeBlock

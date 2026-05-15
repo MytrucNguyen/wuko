@@ -130,7 +130,8 @@ body {
 /* Sidebar active link */
 .nav-link[data-active="true"] {
   color: var(--wuko-accent);
-  background: color-mix(in srgb, var(--wuko-accent) 10%, transparent);
+  background: color-mix(in srgb, var(--wuko-accent) 5%, transparent);
+  box-shadow: inset 2px 0 0 var(--wuko-accent);
 }
 
 /* On-this-page active link */
