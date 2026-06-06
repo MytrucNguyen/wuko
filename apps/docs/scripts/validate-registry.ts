@@ -8,7 +8,7 @@ import { REGISTRY_ITEMS } from "@/lib/registry/items";
 
 const DOCS_ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
-  ".."
+  "..",
 );
 
 function fail(message: string): never {
@@ -37,15 +37,15 @@ async function main(): Promise<void> {
     const result = await buildRegistryItem(source.name);
     if (!result.ok) {
       fail(
-        `buildRegistryItem("${source.name}") returned status ${result.status}: ${result.message}`
+        `buildRegistryItem("${source.name}") returned status ${result.status}: ${result.message}`,
       );
     }
 
-    for (const file of source.files) {
+    for (const file of source.files ?? []) {
       const absolute = path.join(DOCS_ROOT, file.diskPath);
       if (!(await fileExists(absolute))) {
         fail(
-          `Item "${source.name}" file "${file.diskPath}" does not resolve to a file on disk (${absolute}).`
+          `Item "${source.name}" file "${file.diskPath}" does not resolve to a file on disk (${absolute}).`,
         );
       }
       totalFiles++;
@@ -57,7 +57,7 @@ async function main(): Promise<void> {
         const isScoped = dep.startsWith("@");
         if (!isUrl && !isScoped && !itemNames.has(dep)) {
           fail(
-            `Item "${source.name}" registryDependency "${dep}" does not match any local item name.`
+            `Item "${source.name}" registryDependency "${dep}" does not match any local item name.`,
           );
         }
       }
@@ -67,7 +67,7 @@ async function main(): Promise<void> {
   const manifest = buildRegistryManifest();
   if (manifest.items.length !== REGISTRY_ITEMS.length) {
     fail(
-      `Manifest item count (${manifest.items.length}) does not match REGISTRY_ITEMS count (${REGISTRY_ITEMS.length}).`
+      `Manifest item count (${manifest.items.length}) does not match REGISTRY_ITEMS count (${REGISTRY_ITEMS.length}).`,
     );
   }
   for (const source of REGISTRY_ITEMS) {
@@ -78,7 +78,7 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    `Registry validation passed: validated ${REGISTRY_ITEMS.length} item(s), ${totalFiles} file(s).`
+    `Registry validation passed: validated ${REGISTRY_ITEMS.length} item(s), ${totalFiles} file(s).`,
   );
 }
 

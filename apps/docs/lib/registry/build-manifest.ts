@@ -21,7 +21,7 @@ export function buildRegistryManifest(): RegistryManifest {
       ...(source.registryDependencies?.length
         ? { registryDependencies: source.registryDependencies }
         : {}),
-      files: source.files.map((file) => ({
+      files: (source.files ?? []).map((file) => ({
         path: file.registryPath,
         type: file.type,
       })),
