@@ -11,7 +11,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     type: "registry:theme",
     title: "Theme",
     description:
-      "Wuko design tokens. Installs the --wuko-* CSS variables for dark and light mode, plus the @theme inline bridge so Tailwind utilities like bg-wuko-card and text-wuko-accent work in your app.",
+      "Wuko design tokens. Installs the --wuko-* CSS variables for dark and light mode. Consumers add the @theme inline bridge in their own globals.css to expose Tailwind utilities.",
     author: REGISTRY_AUTHOR,
     cssVars: {
       dark: {
@@ -47,25 +47,6 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
         "wuko-success-fg": "#047857",
         "wuko-warning-fg": "#92400e",
         "wuko-gold": "#d4a017",
-      },
-    },
-    css: {
-      "@theme inline": {
-        "--color-wuko-bg": "var(--wuko-bg)",
-        "--color-wuko-card": "var(--wuko-card)",
-        "--color-wuko-border": "var(--wuko-border)",
-        "--color-wuko-heading": "var(--wuko-heading)",
-        "--color-wuko-text": "var(--wuko-text)",
-        "--color-wuko-text-muted": "var(--wuko-text-muted)",
-        "--color-wuko-accent": "var(--wuko-accent)",
-        "--color-wuko-accent-hover": "var(--wuko-accent-hover)",
-        "--color-wuko-accent-active": "var(--wuko-accent-active)",
-        "--color-wuko-danger": "var(--wuko-danger)",
-        "--color-wuko-danger-hover": "var(--wuko-danger-hover)",
-        "--color-wuko-danger-fg": "var(--wuko-danger-fg)",
-        "--color-wuko-success-fg": "var(--wuko-success-fg)",
-        "--color-wuko-warning-fg": "var(--wuko-warning-fg)",
-        "--color-wuko-gold": "var(--wuko-gold)",
       },
     },
   },
