@@ -15,7 +15,7 @@ async function readFiles(
   source: RegistrySource
 ): Promise<RegistryItemFile[] | { error: string }> {
   const files: RegistryItemFile[] = [];
-  for (const file of source.files) {
+  for (const file of source.files ?? []) {
     const absolutePath = path.join(process.cwd(), file.diskPath);
     try {
       const content = await fs.readFile(absolutePath, "utf8");
@@ -65,6 +65,8 @@ export async function buildRegistryItem(
       ? { registryDependencies: source.registryDependencies }
       : {}),
     files: filesResult,
+    ...(source.cssVars ? { cssVars: source.cssVars } : {}),
+    ...(source.css ? { css: source.css } : {}),
   };
 
   return { ok: true, item };
@@ -75,9 +77,9 @@ export async function getRegistrySource(name: string): Promise<string> {
   if (!source) {
     throw new Error(`Registry item "${name}" not found.`);
   }
-  if (source.files.length !== 1) {
+  if (!source.files || source.files.length !== 1) {
     throw new Error(
-      `Expected exactly 1 source file for "${name}", got ${source.files.length}.`,
+      `Expected exactly 1 source file for "${name}", got ${source.files?.length ?? 0}.`,
     );
   }
   const absolutePath = path.join(process.cwd(), source.files[0].diskPath);

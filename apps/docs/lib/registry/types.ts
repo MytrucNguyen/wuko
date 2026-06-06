@@ -66,10 +66,16 @@ export interface RegistrySource {
   author?: string;
   dependencies?: string[];
   registryDependencies?: string[];
-  files: {
+  files?: {
     diskPath: string;
     registryPath: string;
     type: RegistryItemType;
     target: string;
   }[];
+  cssVars?: {
+    theme?: Record<string, string>;
+    light?: Record<string, string>;
+    dark?: Record<string, string>;
+  };
+  css?: Record<string, unknown>;
 }
