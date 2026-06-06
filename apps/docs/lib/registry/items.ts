@@ -51,6 +51,20 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     },
   },
   {
+    name: "base",
+    type: "registry:base",
+    title: "Base",
+    description:
+      "Wuko base styles. Applies --wuko-bg and --wuko-heading to the body so consumer apps inherit Wuko's foundation at first paint. Install after the theme item.",
+    author: REGISTRY_AUTHOR,
+    css: {
+      body: {
+        "background-color": "var(--wuko-bg)",
+        "color": "var(--wuko-heading)",
+      },
+    },
+  },
+  {
     name: "placeholder",
     type: "registry:ui",
     title: "Placeholder",
