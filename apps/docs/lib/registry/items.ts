@@ -264,6 +264,24 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "data-table",
+    type: "registry:ui",
+    title: "DataTable",
+    description:
+      "A composable table with sorting, pagination, and selection built on TanStack Table. Wraps Table primitives and provides a typed columns API.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@tanstack/react-table"],
+    registryDependencies: ["table", "button"],
+    files: [
+      {
+        diskPath: "registry/default/ui/data-table.tsx",
+        registryPath: "ui/data-table.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
