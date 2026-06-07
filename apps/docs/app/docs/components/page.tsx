@@ -56,6 +56,12 @@ const COMPONENTS = [
       "Composable tab primitives: Root, List, Trigger, and Content. Supports controlled and uncontrolled usage with full keyboard navigation.",
   },
   {
+    name: "Table",
+    slug: "table",
+    description:
+      "A responsive table with header, body, footer, row, cell, head, and caption sub-components. Built on native HTML table elements with consistent border, hover, and selection states.",
+  },
+  {
     name: "Toggle",
     slug: "toggle",
     description:

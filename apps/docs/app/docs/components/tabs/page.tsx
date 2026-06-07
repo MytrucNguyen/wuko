@@ -214,8 +214,8 @@ export default function TabsPage() {
 
       <H2 id="controlled">Controlled</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-wuko-text">
-        For full control over the active tab (to sync with URL, server state,
-        or external buttons), pass <code>value</code> and{" "}
+        For full control over the active tab (to sync with URL, server state, or
+        external buttons), pass <code>value</code> and{" "}
         <code>onValueChange</code>. Below, the row of buttons under the tabs
         sets the active tab from outside the component.
       </p>
@@ -230,11 +230,11 @@ export default function TabsPage() {
 
       <H2 id="aschild">As trigger (asChild)</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-wuko-text">
-        Pass <code>asChild</code> to <code>TabsTrigger</code> to substitute
-        your own element as the trigger. Radix applies the trigger&apos;s
-        props (role, data-state, focus management) to your child. The most
-        common use is URL-driven tabs. Render a <code>Link</code> as the
-        trigger so navigation and tab state stay in sync.
+        Pass <code>asChild</code> to <code>TabsTrigger</code> to substitute your
+        own element as the trigger. Radix applies the trigger&apos;s props
+        (role, data-state, focus management) to your child. The most common use
+        is URL-driven tabs. Render a <code>Link</code> as the trigger so
+        navigation and tab state stay in sync.
       </p>
       <ExampleSurface>
         <TabsAsChildExample />
@@ -275,23 +275,23 @@ export default function TabsPage() {
         </li>
         <li>
           <code>asChild</code> uses Radix&apos;s Slot pattern: the
-          consumer&apos;s child element receives the trigger&apos;s ARIA role
-          (<code>role=&quot;tab&quot;</code>),{" "}
-          <code>aria-selected</code>, <code>aria-controls</code>, and ref. The
-          substituted element must accept those attributes. Anchors, buttons,
-          and any forwardRef component work.
+          consumer&apos;s child element receives the trigger&apos;s ARIA role (
+          <code>role=&quot;tab&quot;</code>), <code>aria-selected</code>,{" "}
+          <code>aria-controls</code>, and ref. The substituted element must
+          accept those attributes. Anchors, buttons, and any forwardRef
+          component work.
         </li>
         <li>
-          The active indicator bar is decorative: a CSS{" "}
-          <code>::after</code> pseudo-element driven by{" "}
-          <code>data-state=&quot;active&quot;</code>. Not announced by screen
-          readers; the role + aria-selected does the announcing.
+          The active indicator bar is decorative: a CSS <code>::after</code>{" "}
+          pseudo-element driven by <code>data-state=&quot;active&quot;</code>.
+          Not announced by screen readers; the role + aria-selected does the
+          announcing.
         </li>
       </ul>
 
       <Pager
         prev={{ title: "Modal", path: "/docs/components/modal" }}
-        next={{ title: "Toggle", path: "/docs/components/toggle" }}
+        next={{ title: "Table", path: "/docs/components/table" }}
       />
     </>
   );

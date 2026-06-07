@@ -248,6 +248,22 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "table",
+    type: "registry:ui",
+    title: "Table",
+    description:
+      "A responsive table with header, body, footer, row, cell, head, and caption sub-components. Built on native HTML table elements with consistent border, hover, and selection states. Combine with @tanstack/react-table for sorting, filtering, and pagination.",
+    author: REGISTRY_AUTHOR,
+    files: [
+      {
+        diskPath: "registry/default/ui/table.tsx",
+        registryPath: "ui/table.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
