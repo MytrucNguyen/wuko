@@ -49,7 +49,7 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
-      "border-t border-wuko-border bg-wuko-card/50 font-medium [&>tr]:last:border-b-0",
+      "border-t-2 border-wuko-border font-medium [&_tr]:bg-wuko-bg [&_tr]:border-b-0 [&_tr:hover]:bg-wuko-bg",
       className,
     )}
     {...props}
@@ -64,7 +64,7 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "border-b border-wuko-border transition-colors hover:bg-wuko-card/40 data-[state=selected]:bg-wuko-card/60",
+      "border-b border-wuko-border transition-colors hover:bg-wuko-card/40 data-[state=selected]:bg-wuko-accent/15",
       className,
     )}
     {...props}
