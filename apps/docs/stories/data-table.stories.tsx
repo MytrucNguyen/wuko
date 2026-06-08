@@ -99,6 +99,7 @@ type DataTableStoryArgs = {
   pageSize?: number;
   filterColumn?: string;
   filterPlaceholder?: string;
+  enableColumnVisibility?: boolean;
 };
 
 const meta: Meta<DataTableStoryArgs> = {
@@ -142,18 +143,26 @@ export const WithSelection: Story = {
   },
 };
 
-export const Empty: Story = {
-  args: {
-    columns: basicColumns,
-    data: [],
-  },
-};
-
 export const WithFiltering: Story = {
   args: {
     columns: basicColumns,
     data: MANY_KIOSKS,
     filterColumn: "region",
     filterPlaceholder: "Filter by region...",
+  },
+};
+
+export const WithVisibility: Story = {
+  args: {
+    columns: basicColumns,
+    data: KIOSKS,
+    enableColumnVisibility: true,
+  },
+};
+
+export const Empty: Story = {
+  args: {
+    columns: basicColumns,
+    data: [],
   },
 };
