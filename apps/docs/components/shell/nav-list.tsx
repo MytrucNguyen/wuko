@@ -20,6 +20,8 @@ const NAV = [
       { label: "Badge", path: "/docs/components/badge" },
       { label: "Button", path: "/docs/components/button" },
       { label: "Card", path: "/docs/components/card" },
+      { label: "Checkbox", path: "/docs/components/checkbox" },
+      { label: "DropdownMenu", path: "/docs/components/dropdown-menu" },
       { label: "Input", path: "/docs/components/input" },
       { label: "Modal", path: "/docs/components/modal" },
       { label: "Tabs", path: "/docs/components/tabs" },
@@ -30,7 +32,7 @@ const NAV = [
   },
 ];
 
-const COMING_SOON = ["Theming", "Form", "DataTable"];
+const COMING_SOON = ["Theming", "Form"];
 
 interface NavListProps {
   onNavigate?: () => void;
@@ -48,7 +50,8 @@ export function NavList({ onNavigate }: NavListProps) {
               href={section.path}
               data-active={pathname === section.path}
               onClick={onNavigate}
-              className="nav-link mb-2 block rounded-md px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-wuko-text-muted transition-colors hover:text-wuko-heading"            >
+              className="nav-link mb-2 block rounded-md px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-wuko-text-muted transition-colors hover:text-wuko-heading"
+            >
               {section.title}
             </Link>
           ) : (
@@ -79,10 +82,7 @@ export function NavList({ onNavigate }: NavListProps) {
         </div>
         <ul className="space-y-1.5 text-[13.5px] text-wuko-text-muted">
           {COMING_SOON.map((label) => (
-            <li
-              key={label}
-              className="inline-flex w-full items-center gap-1.5"
-            >
+            <li key={label} className="inline-flex w-full items-center gap-1.5">
               <span>{label}</span>
               <span className="rounded border border-wuko-border px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-wuko-text-muted">
                 soon

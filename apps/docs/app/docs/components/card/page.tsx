@@ -99,7 +99,7 @@ export default function CardPage() {
 
       <Pager
         prev={{ title: "Button", path: "/docs/components/button" }}
-        next={{ title: "Input", path: "/docs/components/input" }}
+        next={{ title: "Checkbox", path: "/docs/components/checkbox" }}
       />
     </>
   );

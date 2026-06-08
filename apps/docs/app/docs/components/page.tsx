@@ -38,6 +38,18 @@ const COMPONENTS = [
       "A bordered surface for grouping related content. The neutral building block behind most composed UI in the kit.",
   },
   {
+    name: "Checkbox",
+    slug: "checkbox",
+    description:
+      "A control that toggles between checked, unchecked, and indeterminate states. Built on Radix Checkbox with aria-invalid support and full keyboard accessibility.",
+  },
+  {
+    name: "DropdownMenu",
+    slug: "dropdown-menu",
+    description:
+      "A menu of actions or options triggered by a button. Supports items, labels, separators, shortcuts, checkbox/radio items, submenus, and a destructive variant. Built on Radix DropdownMenu.",
+  },
+  {
     name: "Input",
     slug: "input",
     description:

@@ -312,7 +312,7 @@ export default function InputPage() {
       </ul>
 
       <Pager
-        prev={{ title: "Card", path: "/docs/components/card" }}
+        prev={{ title: "DropdownMenu", path: "/docs/components/dropdown-menu" }}
         next={{ title: "Modal", path: "/docs/components/modal" }}
       />
     </>
