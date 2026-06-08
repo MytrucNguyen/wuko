@@ -47,6 +47,11 @@ const wukoLight = create({
 const preview: Preview = {
   parameters: {
     layout: "centered",
+    options: {
+      storySort: {
+        method: "alphabetical",
+      },
+    },
     docs: {
       container: ({
         children,
