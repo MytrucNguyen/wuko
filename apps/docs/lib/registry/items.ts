@@ -299,6 +299,23 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "checkbox",
+    type: "registry:ui",
+    title: "Checkbox",
+    description:
+      "A checkbox with checked, unchecked, and indeterminate states. Built on Radix Checkbox for full keyboard support and accessibility.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-checkbox"],
+    files: [
+      {
+        diskPath: "registry/default/ui/checkbox.tsx",
+        registryPath: "ui/checkbox.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
