@@ -4,9 +4,12 @@ import * as React from "react";
 import {
   type Column,
   type ColumnDef,
+  type ColumnFiltersState,
+  type RowSelectionState,
   type SortingState,
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
@@ -22,19 +25,28 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   pageSize?: number;
+  filterColumn?: string;
+  filterPlaceholder?: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
   pageSize = 10,
+  filterColumn,
+  filterPlaceholder = "Filter...",
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [rowSelection, setRowSelection] = React.useState<RowSelectionState>({});
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    [],
+  );
 
   const table = useReactTable({
     data,
@@ -42,15 +54,33 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     onSortingChange: setSorting,
-    state: { sorting },
+    onRowSelectionChange: setRowSelection,
+    onColumnFiltersChange: setColumnFilters,
+    state: { sorting, rowSelection, columnFilters },
     initialState: { pagination: { pageSize } },
   });
 
   return (
     <div className="w-full">
+      {filterColumn && (
+        <div className="flex items-center pb-4">
+          <Input
+            placeholder={filterPlaceholder}
+            value={
+              (table.getColumn(filterColumn)?.getFilterValue() as string) ?? ""
+            }
+            onChange={(event) =>
+              table.getColumn(filterColumn)?.setFilterValue(event.target.value)
+            }
+            className="max-w-sm"
+          />
+        </div>
+      )}
       <div className="overflow-hidden rounded-lg border border-wuko-border">
         <Table>
+          {" "}
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
@@ -60,7 +90,7 @@ export function DataTable<TData, TValue>({
                       ? null
                       : flexRender(
                           header.column.columnDef.header,
-                          header.getContext()
+                          header.getContext(),
                         )}
                   </TableHead>
                 ))}
@@ -76,7 +106,10 @@ export function DataTable<TData, TValue>({
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext(),
+                      )}
                     </TableCell>
                   ))}
                 </TableRow>
@@ -103,7 +136,9 @@ interface DataTablePaginationProps<TData> {
   table: ReturnType<typeof useReactTable<TData>>;
 }
 
-function DataTablePagination<TData>({ table }: DataTablePaginationProps<TData>) {
+function DataTablePagination<TData>({
+  table,
+}: DataTablePaginationProps<TData>) {
   const totalRows = table.getFilteredRowModel().rows.length;
   const pageSize = table.getState().pagination.pageSize;
   const pageIndex = table.getState().pagination.pageIndex;
@@ -112,8 +147,13 @@ function DataTablePagination<TData>({ table }: DataTablePaginationProps<TData>) 
 
   return (
     <div className="flex items-center justify-between px-2 py-4">
-      <div className="text-sm text-wuko-text-muted">
-        Showing {firstRow}–{lastRow} of {totalRows}
+      <div className="flex flex-col gap-1 text-sm text-wuko-text-muted">
+        <div>
+          Showing {firstRow}–{lastRow} of {totalRows}
+        </div>
+        {table.getFilteredSelectedRowModel().rows.length > 0 && (
+          <div>{table.getFilteredSelectedRowModel().rows.length} selected</div>
+        )}
       </div>
       <div className="flex items-center gap-2">
         <Button
