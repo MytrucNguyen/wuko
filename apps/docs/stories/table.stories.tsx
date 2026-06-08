@@ -11,6 +11,18 @@ import {
   TableRow,
 } from "@/registry/default/ui/table";
 
+import { MoreHorizontal } from "lucide-react";
+
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
+
 const meta = {
   title: "Components/Table",
   component: Table,
@@ -133,6 +145,48 @@ export const SelectedRow: Story = {
           <TableCell>us-east</TableCell>
           <TableCell>updating</TableCell>
         </TableRow>
+      </TableBody>
+    </Table>
+  ),
+};
+
+export const WithActions: Story = {
+  render: () => (
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Device</TableHead>
+          <TableHead>Region</TableHead>
+          <TableHead className="w-[50px]" />
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {KIOSKS.slice(0, 3).map((kiosk) => (
+          <TableRow key={kiosk.id}>
+            <TableCell>{kiosk.id}</TableCell>
+            <TableCell>{kiosk.region}</TableCell>
+            <TableCell>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    aria-label="Open menu"
+                  >
+                    <MoreHorizontal className="size-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                  <DropdownMenuItem>Copy device ID</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>View details</DropdownMenuItem>
+                  <DropdownMenuItem>Restart device</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </TableCell>
+          </TableRow>
+        ))}
       </TableBody>
     </Table>
   ),

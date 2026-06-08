@@ -1,8 +1,19 @@
+import { MoreHorizontal } from "lucide-react";
+
 import { CodeBlock } from "@/components/docs/code-block";
 import { H2 } from "@/components/docs/h2";
 import { InstallationTabs } from "@/components/docs/installation-tabs";
 import { Pager } from "@/components/docs/pager";
 import { PropsTable } from "@/components/docs/props-table";
+import { Button } from "@/registry/default/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/registry/default/ui/dropdown-menu";
 import {
   Table,
   TableBody,
@@ -91,6 +102,50 @@ const FOOTER_SAMPLE = `<Table>
   </TableFooter>
 </Table>`;
 
+const ACTIONS_SAMPLE = `import { MoreHorizontal } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Device</TableHead>
+      <TableHead>Region</TableHead>
+      <TableHead className="w-12.5" />
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>KIOSK-4729</TableCell>
+      <TableCell>us-west</TableCell>
+      <TableCell>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon-sm" aria-label="Open menu">
+              <MoreHorizontal className="size-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuItem>Copy device ID</DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>View details</DropdownMenuItem>
+            <DropdownMenuItem>Restart device</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </TableCell>
+    </TableRow>
+  </TableBody>
+</Table>`;
+
 const SELECTED_SAMPLE = `<TableRow data-state="selected">
   <TableCell>KIOSK-4729</TableCell>
   <TableCell>us-west</TableCell>
@@ -146,7 +201,7 @@ const SUB_COMPONENTS_ROWS = [
     type: "HTMLAttributes<HTMLTableRowElement>",
     default: "—",
     description:
-      'Renders <tr>. Includes hover and selected (data-state="selected") styling.',
+      "Renders <tr>. Includes hover and selected (data-state=\"selected\") styling.",
   },
   {
     name: "TableHead",
@@ -278,10 +333,79 @@ export default function TablePage() {
       </ExampleSurface>
       <CodeBlock lang="tsx" code={FOOTER_SAMPLE} />
 
+      <H2 id="actions">Actions</H2>
+      <p className="mb-4 text-[14px] leading-relaxed text-wuko-text">
+        Compose Table with <code>DropdownMenu</code> to add per-row actions
+        like edit, delete, or copy. The trigger is an icon-only Button to keep
+        the action column visually compact.
+      </p>
+      <ExampleSurface>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Device</TableHead>
+              <TableHead>Region</TableHead>
+              <TableHead className="w-12.5" />
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell>KIOSK-4729</TableCell>
+              <TableCell>us-west</TableCell>
+              <TableCell>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon-sm"
+                      aria-label="Open menu"
+                    >
+                      <MoreHorizontal className="size-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                    <DropdownMenuItem>Copy device ID</DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>View details</DropdownMenuItem>
+                    <DropdownMenuItem>Restart device</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>KIOSK-3310</TableCell>
+              <TableCell>us-east</TableCell>
+              <TableCell>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon-sm"
+                      aria-label="Open menu"
+                    >
+                      <MoreHorizontal className="size-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                    <DropdownMenuItem>Copy device ID</DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>View details</DropdownMenuItem>
+                    <DropdownMenuItem>Restart device</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </ExampleSurface>
+      <CodeBlock lang="tsx" code={ACTIONS_SAMPLE} />
+
       <H2 id="states">Row states</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-wuko-text">
-        Rows hover automatically. To mark a row as selected (e.g., to pair with
-        a checkbox column), set <code>data-state=&quot;selected&quot;</code>.
+        Rows hover automatically. To mark a row as selected (e.g., to pair
+        with a checkbox column), set <code>data-state=&quot;selected&quot;</code>.
       </p>
       <ExampleSurface>
         <Table>
@@ -326,8 +450,8 @@ export default function TablePage() {
       <H2 id="props">Sub-components</H2>
       <p className="mb-4 text-[14px] leading-relaxed text-wuko-text">
         Every sub-component forwards <code>className</code> and all native
-        attributes for its underlying element. There are no custom props beyond
-        what HTML already provides.
+        attributes for its underlying element. There are no custom props
+        beyond what HTML already provides.
       </p>
       <PropsTable rows={SUB_COMPONENTS_ROWS} />
 
@@ -336,14 +460,14 @@ export default function TablePage() {
         <li>
           Renders native HTML table elements (<code>&lt;table&gt;</code>,{" "}
           <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,{" "}
-          <code>&lt;tr&gt;</code>, etc.). Screen readers announce row and column
-          counts, header relationships, and cell positions without additional
-          ARIA wiring.
+          <code>&lt;tr&gt;</code>, etc.). Screen readers announce row and
+          column counts, header relationships, and cell positions without
+          additional ARIA wiring.
         </li>
         <li>
-          Use <code>TableCaption</code> to give the table a name. Screen readers
-          announce the caption before the table contents, which orients users
-          entering the table.
+          Use <code>TableCaption</code> to give the table a name. Screen
+          readers announce the caption before the table contents, which
+          orients users entering the table.
         </li>
         <li>
           For columns that sort, render a button inside <code>TableHead</code>{" "}
