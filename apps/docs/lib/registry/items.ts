@@ -272,7 +272,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       "A composable table with sorting, pagination, and selection built on TanStack Table. Wraps Table primitives and provides a typed columns API.",
     author: REGISTRY_AUTHOR,
     dependencies: ["@tanstack/react-table"],
-    registryDependencies: ["table", "button"],
+    registryDependencies: ["table", "button", "input", "checkbox", "dropdown-menu"],
     files: [
       {
         diskPath: "registry/default/ui/data-table.tsx",
