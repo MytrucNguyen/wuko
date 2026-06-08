@@ -282,6 +282,23 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "dropdown-menu",
+    type: "registry:ui",
+    title: "DropdownMenu",
+    description:
+      "A menu that opens from a button trigger, with item, label, separator, and checkbox/radio sub-components. Built on Radix UI for full keyboard navigation and accessibility.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-dropdown-menu"],
+    files: [
+      {
+        diskPath: "registry/default/ui/dropdown-menu.tsx",
+        registryPath: "ui/dropdown-menu.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
