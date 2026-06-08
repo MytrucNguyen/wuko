@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
-import { Footer } from "@/components/shell/footer";
+import { ConditionalFooter } from "@/components/shell/conditional-footer";
 import { Header } from "@/components/shell/header";
 import { MobileNavDrawer } from "@/components/shell/mobile-nav-drawer";
 import { MobileNavProvider } from "@/components/shell/mobile-nav-provider";
@@ -72,7 +72,7 @@ export default function RootLayout({
             <SearchDialog />
             <MobileNavDrawer />
             <main className="flex-1">{children}</main>
-            <Footer />
+            <ConditionalFooter />
           </MobileNavProvider>
         </SearchProvider>
       </body>
