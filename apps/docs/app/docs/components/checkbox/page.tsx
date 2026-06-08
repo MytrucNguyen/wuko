@@ -310,8 +310,8 @@ export default function CheckboxPage() {
       </ul>
 
       <Pager
-        prev={{ title: "DropdownMenu", path: "/docs/components/dropdown-menu" }}
-        next={{ title: "DropdownMenu", path: "/docs/components/dropdown-menu" }}
+        prev={{ title: "Card", path: "/docs/components/card" }}
+        next={{ title: "DataTable", path: "/docs/components/data-table" }}
       />
     </>
   );

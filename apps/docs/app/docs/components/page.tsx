@@ -44,6 +44,12 @@ const COMPONENTS = [
       "A control that toggles between checked, unchecked, and indeterminate states. Built on Radix Checkbox with aria-invalid support and full keyboard accessibility.",
   },
   {
+    name: "DataTable",
+    slug: "data-table",
+    description:
+      "An opinionated table with sorting, pagination, filtering, row selection, column visibility, and row actions. Built on @tanstack/react-table and Wuko's Table primitive.",
+  },
+  {
     name: "DropdownMenu",
     slug: "dropdown-menu",
     description:
@@ -62,16 +68,16 @@ const COMPONENTS = [
       "An accessible dialog with title, description, and footer slots. Handles focus trap, scroll lock, and keyboard dismissal.",
   },
   {
-    name: "Tabs",
-    slug: "tabs",
-    description:
-      "Composable tab primitives: Root, List, Trigger, and Content. Supports controlled and uncontrolled usage with full keyboard navigation.",
-  },
-  {
     name: "Table",
     slug: "table",
     description:
       "A responsive table with header, body, footer, row, cell, head, and caption sub-components. Built on native HTML table elements with consistent border, hover, and selection states.",
+  },
+  {
+    name: "Tabs",
+    slug: "tabs",
+    description:
+      "Composable tab primitives: Root, List, Trigger, and Content. Supports controlled and uncontrolled usage with full keyboard navigation.",
   },
   {
     name: "Toggle",

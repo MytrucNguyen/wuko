@@ -700,8 +700,8 @@ export default function DropdownMenuPage() {
       </ul>
 
       <Pager
-        prev={{ title: "Checkbox", path: "/docs/components/checkbox" }}
-        next={{ title: "Checkbox", path: "/docs/components/checkbox" }}
+        prev={{ title: "DataTable", path: "/docs/components/data-table" }}
+        next={{ title: "Input", path: "/docs/components/input" }}
       />
     </>
   );
