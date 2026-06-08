@@ -77,12 +77,15 @@ const DropdownMenuItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean;
+    variant?: "default" | "destructive";
   }
->(({ className, inset, ...props }, ref) => (
+>(({ className, inset, variant = "default", ...props }, ref) => (
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
       "relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-wuko-card/60 focus:text-wuko-heading data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      variant === "destructive" &&
+        "text-wuko-danger-fg focus:bg-wuko-danger/15 focus:text-wuko-danger-fg",
       inset && "pl-8",
       className,
     )}
@@ -166,6 +169,7 @@ const DropdownMenuSeparator = React.forwardRef<
     {...props}
   />
 ));
+
 DropdownMenuSeparator.displayName =
   DropdownMenuPrimitive.Separator.displayName;
 
@@ -183,6 +187,7 @@ const DropdownMenuShortcut = ({
     />
   );
 };
+
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
 
 export {
