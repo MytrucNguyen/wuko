@@ -339,6 +339,22 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "skeleton",
+    type: "registry:ui",
+    title: "Skeleton",
+    description:
+      "A placeholder block with a subtle pulse animation. Use for loading states — set width and height via className.",
+    author: REGISTRY_AUTHOR,
+    files: [
+      {
+        diskPath: "registry/default/ui/skeleton.tsx",
+        registryPath: "ui/skeleton.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
