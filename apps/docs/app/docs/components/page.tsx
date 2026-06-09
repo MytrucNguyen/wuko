@@ -68,6 +68,12 @@ const COMPONENTS = [
       "Page navigation with previous, next, page-number, and ellipsis sub-components. A standalone primitive for paginating any list, grid, or data view.",
   },
   {
+    name: "Skeleton",
+    slug: "skeleton",
+    description:
+      "A placeholder block with a subtle pulse animation. Composes via className to match the shape of any loading content.",
+  },
+  {
     name: "Table",
     slug: "table",
     description:

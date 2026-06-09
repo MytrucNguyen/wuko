@@ -488,7 +488,7 @@ export default function TablePage() {
       </ul>
 
       <Pager
-        prev={{ title: "Pagination", path: "/docs/components/pagination" }}
+        prev={{ title: "Skeleton", path: "/docs/components/skeleton" }}
         next={{ title: "Tabs", path: "/docs/components/tabs" }}
       />
     </>

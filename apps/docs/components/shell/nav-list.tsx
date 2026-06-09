@@ -26,6 +26,7 @@ const NAV = [
       { label: "Input", path: "/docs/components/input" },
       { label: "Modal", path: "/docs/components/modal" },
       { label: "Pagination", path: "/docs/components/pagination" },
+      { label: "Skeleton", path: "/docs/components/skeleton" },
       { label: "Table", path: "/docs/components/table" },
       { label: "Tabs", path: "/docs/components/tabs" },
       { label: "Toggle", path: "/docs/components/toggle" },
