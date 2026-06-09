@@ -272,7 +272,13 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       "A composable table with sorting, pagination, and selection built on TanStack Table. Wraps Table primitives and provides a typed columns API.",
     author: REGISTRY_AUTHOR,
     dependencies: ["@tanstack/react-table"],
-    registryDependencies: ["table", "button", "input", "checkbox", "dropdown-menu"],
+    registryDependencies: [
+      "table",
+      "button",
+      "input",
+      "checkbox",
+      "dropdown-menu",
+    ],
     files: [
       {
         diskPath: "registry/default/ui/data-table.tsx",
@@ -311,6 +317,23 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       {
         diskPath: "registry/default/ui/checkbox.tsx",
         registryPath: "ui/checkbox.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
+  {
+    name: "pagination",
+    type: "registry:ui",
+    title: "Pagination",
+    description:
+      "Page navigation with previous, next, page number, and ellipsis sub-components. A standalone primitive — pair with any list, grid, or data view that needs page-by-page browsing.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["lucide-react"],
+    files: [
+      {
+        diskPath: "registry/default/ui/pagination.tsx",
+        registryPath: "ui/pagination.tsx",
         type: "registry:ui",
         target: "",
       },
