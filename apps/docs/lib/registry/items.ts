@@ -273,11 +273,11 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     author: REGISTRY_AUTHOR,
     dependencies: ["@tanstack/react-table"],
     registryDependencies: [
-      "table",
-      "button",
-      "input",
-      "checkbox",
-      "dropdown-menu",
+      "@wuko/table",
+      "@wuko/button",
+      "@wuko/input",
+      "@wuko/checkbox",
+      "@wuko/dropdown-menu",
     ],
     files: [
       {
