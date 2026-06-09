@@ -355,6 +355,23 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
       },
     ],
   },
+  {
+    name: "select",
+    type: "registry:ui",
+    title: "Select",
+    description:
+      "A dropdown menu of options triggered by a button. Built on Radix Select with full keyboard navigation, search-as-you-type, and an opinionated trigger style matching Input.",
+    author: REGISTRY_AUTHOR,
+    dependencies: ["@radix-ui/react-select"],
+    files: [
+      {
+        diskPath: "registry/default/ui/select.tsx",
+        registryPath: "ui/select.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+  },
 ];
 
 export function getRegistryItem(name: string): RegistrySource | undefined {
