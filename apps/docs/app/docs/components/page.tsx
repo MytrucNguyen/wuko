@@ -68,6 +68,12 @@ const COMPONENTS = [
       "Page navigation with previous, next, page-number, and ellipsis sub-components. A standalone primitive for paginating any list, grid, or data view.",
   },
   {
+    name: "Select",
+    slug: "select",
+    description:
+      "A dropdown menu of options triggered by a button. Built on Radix Select with keyboard navigation, search-as-you-type, and trigger styling that matches Input.",
+  },
+  {
     name: "Skeleton",
     slug: "skeleton",
     description:

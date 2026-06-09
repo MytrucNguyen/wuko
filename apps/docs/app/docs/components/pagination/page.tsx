@@ -336,7 +336,7 @@ export default function PaginationPage() {
 
       <Pager
         prev={{ title: "Modal", path: "/docs/components/modal" }}
-        next={{ title: "Skeleton", path: "/docs/components/skeleton" }}
+        next={{ title: "Select", path: "/docs/components/select" }}
       />
     </>
   );

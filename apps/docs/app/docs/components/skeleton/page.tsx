@@ -192,7 +192,7 @@ export default function SkeletonPage() {
       </ul>
 
       <Pager
-        prev={{ title: "Pagination", path: "/docs/components/pagination" }}
+        prev={{ title: "Select", path: "/docs/components/select" }}
         next={{ title: "Table", path: "/docs/components/table" }}
       />
     </>
