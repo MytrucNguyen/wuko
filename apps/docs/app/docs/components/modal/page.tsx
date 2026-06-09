@@ -200,7 +200,7 @@ export default function ModalPage() {
 
       <Pager
         prev={{ title: "Input", path: "/docs/components/input" }}
-        next={{ title: "Tabs", path: "/docs/components/tabs" }}
+        next={{ title: "Pagination", path: "/docs/components/pagination" }}
       />
     </>
   );

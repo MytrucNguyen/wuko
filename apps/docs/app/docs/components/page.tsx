@@ -62,10 +62,10 @@ const COMPONENTS = [
       "A labeled text field with hint and error states, three size variants, and a left-icon slot. Includes a built-in password reveal.",
   },
   {
-    name: "Modal",
-    slug: "modal",
+    name: "Pagination",
+    slug: "pagination",
     description:
-      "An accessible dialog with title, description, and footer slots. Handles focus trap, scroll lock, and keyboard dismissal.",
+      "Page navigation with previous, next, page-number, and ellipsis sub-components. A standalone primitive for paginating any list, grid, or data view.",
   },
   {
     name: "Table",
@@ -123,7 +123,10 @@ export default function ComponentsIndexPage() {
         ))}
       </div>
 
-      <Pager prev={{ title: "Tooltip", path: "/docs/components/tooltip" }} />
+      <Pager
+        prev={{ title: "Tooltip", path: "/docs/components/tooltip" }}
+        next={{ title: "Alert", path: "/docs/components/alert" }}
+      />
     </>
   );
 }

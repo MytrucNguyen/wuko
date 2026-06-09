@@ -148,7 +148,7 @@ export default function TogglePage() {
       <PropsTable rows={PROPS_ROWS} />
 
       <Pager
-        prev={{ title: "Table", path: "/docs/components/table" }}
+        prev={{ title: "Tabs", path: "/docs/components/tabs" }}
         next={{ title: "Tooltip", path: "/docs/components/tooltip" }}
       />
     </>
