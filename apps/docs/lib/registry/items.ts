@@ -87,7 +87,7 @@ export const REGISTRY_ITEMS: RegistrySource[] = [
     description:
       "Triggers an action. Five style variants and three sizes, with loading and disabled states plus leading/trailing icon slots.",
     author: REGISTRY_AUTHOR,
-    dependencies: ["class-variance-authority"],
+    dependencies: ["tailwind-merge", "class-variance-authority"],
     files: [
       {
         diskPath: "registry/default/ui/button.tsx",
