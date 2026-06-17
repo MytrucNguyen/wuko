@@ -28,6 +28,16 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
+# design-sync (claude.ai/design) — transient build/verification state.
+# Durable inputs (config.json, NOTES.md, conventions.md, previews/, overrides/,
+# pkg/) are committed; everything below regenerates per run.
+.ds-sync/
+ds-bundle/
+.design-sync/sb-reference/
+.design-sync/learnings/
+.design-sync/.cache/
+.design-sync/node_modules
+
 # IDE / agent state
 .vscode/*
 !.vscode/extensions.json
@@ -43,3 +53,4 @@ next-env.d.ts
 # coverage
 coverage/
 .nyc_output/
+.design-sync/pkg/node_modules
