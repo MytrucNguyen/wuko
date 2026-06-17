@@ -1,0 +1,8 @@
+{
+  "name": "wuko",
+  "version": "0.1.0",
+  "private": true,
+  "module": "./index.ts",
+  "main": "./index.ts",
+  "types": "./index.ts"
+}

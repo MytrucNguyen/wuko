@@ -1,0 +1,33 @@
+{
+  "projectId": "0c3adcce-57f7-4479-ab60-7218d86d979d",
+  "shape": "storybook",
+  "pkg": "wuko",
+  "globalName": "Wuko",
+  "entry": ".design-sync/pkg/index.ts",
+  "tsconfig": "../../apps/docs/tsconfig.json",
+  "storybookConfigDir": "apps/docs/.storybook",
+  "storybookStatic": ".design-sync/sb-reference",
+  "buildCmd": "npx storybook build -c apps/docs/.storybook -o .design-sync/sb-reference",
+  "storyImports": {
+    "shim": ["/registry/default/ui/"]
+  },
+  "readmeHeader": ".design-sync/conventions.md",
+  "guidelinesGlob": ["../../THEMING.md"],
+  "libOverrides": {
+    "css-fallback.mjs": "append preview-head --font-* vars AND force navy body backdrop (html body{background:var(--wuko-bg)}) over emit.mjs inline body{#fff} — Wuko is dark-default"
+  },
+  "overrides": {
+    "Card": {
+      "skip": ["components-card--with-image"]
+    },
+    "Avatar": {
+      "skip": ["components-avatar--with-image"]
+    },
+    "Skeleton": {
+      "cardMode": "column"
+    },
+    "Pagination": {
+      "cardMode": "column"
+    }
+  }
+}
